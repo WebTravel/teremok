@@ -1,0 +1,84 @@
+.header {
+  &__top {
+    height: rem-calc(50);
+    border-bottom: 1px solid $inputBorderColor;
+    > .row {
+      height: 100%;
+    }
+  }
+  &__location {
+    font-size: 1rem;
+    a {
+      border-bottom: 1px dashed;
+      margin-left: 2px;
+    }
+  }
+  &__info {
+    height: 100%;
+  }
+  &__cart {
+    background-color: $buttonBorder;
+    background-image: linear-gradient(-45deg, $buttonOne 0%, $buttonTwo 100%);
+    height: 100%;
+    display: block;
+    color: $white;
+    width: 10.313rem;
+    font-size: 1.063rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s ease all;
+    cursor: pointer;
+    @include breakpoint(large) {
+      &:hover {
+        background-image: linear-gradient(-45deg, $buttonTwo 0%, $buttonOne 100%);
+        opacity: 0.8
+      }
+    }
+  }
+  &__favorites, &__compare {
+    color: $baseColor;
+  }
+  &__main {
+    > .row {
+      padding: rem-calc(32px) 0;
+    }
+  }
+  &__contacts {
+    a {
+      display: block;
+      &.header__tel {
+        font-size: 1.25rem;
+        color: $baseColor;
+        margin-bottom: rem-calc(6);
+      }
+    }
+  }
+}
+
+.search {
+  position: relative;
+  &__field {
+    width: 100%;
+    height: 2.625rem;
+    line-height: 2.625rem;
+    border-radius: $bigBr;
+    border: 0.063rem solid $inputBorderColor;
+    background-color: $white;
+    padding: 0 rem-calc(23);
+    font-family: $font, Arial, sans-serif;
+    font-size: 1rem;
+    color: $baseColor;
+    &::placeholder {
+      color: #989c9e;
+    }
+  }
+  &__submit {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

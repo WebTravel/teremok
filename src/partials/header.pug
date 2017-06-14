@@ -1,4 +1,21 @@
 block header
-  header.site-header.row
-    .column
-      | header
+  header.header
+    .header__top
+      .row.flex.jcsb.aic
+        .header__location.column.large-2
+          | Ваш город: 
+          a(href="#") Москва
+        .header__info.column.large-5.flex.jcsb.aic
+          a.header__favorites(href="#") Избранное
+          a.header__compare(href="#") Сравнение
+          a.header__cart(href="#") Корзина
+    .header__main
+      .row.flex.jcsb.aic
+        a.header__logo.logo
+          img(src="assets/img/logo.png")
+        form.header__search.search.column.large-5(action="")
+          input.search__field(placeholder="Поиск товара" type="text")
+          input.search__submit(type="submit" value="")
+        .header__contacts.column.large-2
+          a.header__tel.tel(href="tel:+74996382929") 8 (499) 638-29-29
+          a.header__callback.callback(href="#") Обратный звонок

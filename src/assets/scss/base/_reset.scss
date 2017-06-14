@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=cyrillic,cyrillic-ext');
+
+
+:root {
+  line-height: 1;
+  font-size: 16px;
+  background: $background;
+  height: 100%;
+  font-family: $font, Arial, sans-serif;
+  color: $baseColor;
+  font-weight: 400;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+  
+ol, ul {
+  list-style: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+  
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+  
+a img {
+  border: none;
+}
+  
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+aside, header, footer, div, ul, li {
+  box-sizing: border-box;
+}
+
+button, button:active, button:focus, button:hover, button:visited {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  outline: none;
+  @extend %linkNone;
+  color: $linkColor;
+}
+
+footer a, header a, nav a {
+  text-decoration: none;
+}
+  
+input, textarea {
+  font-family: $font, Arial, sans-serif;
+  border: 1px solid $borderColor;
+  outline: none;
+  border-radius: $bigBr;
+  border: 0.063rem solid $inputBorderColor;
+  background-color: $white;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  border: none;
+  outline: none;
+}
+  
+.clear {
+  clear: both;
+}
+  
+html,body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  opacity: 0;
+  display: none; 
+}
+
+html,body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+  
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0 0 20px 0;
+  border: solid 1px $borderColor;
+}
+
+table th, table thead td, table thead th {
+  color: $baseColor;
+  font-weight: bold;
+}
+
+table td, table th {
+  padding: 10px;
+  box-sizing: border-box;
+}
+  
+ol li p, ol li h1, ol li h2, ol li h3, ul li p, ul li h1, ul li h2, ul li h3, ol li p, ol li h1, ol li h2, ol li h3, ul li p, ul li h1, ul li h2, ul li h3 {
+  margin: 0;
+} 
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: rem-calc(30)
+}
+
+h2, h3 {
+  font-size: rem-calc(24)
+}
+
+h4 {
+  font-size: rem-calc(22)
+}
+
+h5 {
+  font-size: rem-calc(20)
+}
+
+h6 {
+  font-size: rem-calc(18)
+}
+
+section, article {
+  p {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    margin-bottom: $mbp;
+    &:last-child {
+      margin-bottom: 0;
+    }  
+  }  
+}
+
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.aic {
+  align-items: center;
+}
+  
+  
+
+  

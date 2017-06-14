@@ -1,0 +1,38 @@
+%linkNone {
+  &:hover {
+    @include breakpoint(large) {
+      text-decoration: none;
+    } 
+  }  
+}
+
+%linkUnder {
+  text-decoration: none;
+  &:hover {
+    @include breakpoint(large) {
+      text-decoration: underline;
+    } 
+  }  
+}
+
+%opacity {
+  &:hover {
+    @include breakpoint(large) {
+      opacity: 0.8;
+    } 
+  }
+}
+
+%line {
+  &:after {
+    width: 2.313rem;
+    height: 0.313rem;
+    background-color: $buttonBorder;
+    background-image: linear-gradient(-10deg, $buttonOne 0%, $buttonTwo 100%);
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+  }
+}
+  

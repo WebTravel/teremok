@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>home page</title>
-    <meta name="viewport" content="width=device-width">
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <meta description="" content="">
+    <meta keywords="" content=""><link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/assets/css/screen.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="/assets/js/foundation.min.js"></script>
-    <script src="/assets/js/libs.js"></script>
   </head>
   <body>
-    <div class="row">
-      <div class="column">prepend</div>
-    </div>
-    <div class="row">
-      <div class="column">prepend</div>
-    </div>
-    <header class="site-header row">
-      <div class="column">header</div>
+    <header class="header">
+      <div class="header__top">
+        <div class="row flex jcsb aic">
+          <div class="header__location column large-2">Ваш город: <a href="#">Москва</a></div>
+          <div class="header__info column large-5 flex jcsb aic"><a class="header__favorites" href="#">Избранное</a><a class="header__compare" href="#">Сравнение</a><a class="header__cart" href="#">Корзина</a></div>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="row flex jcsb aic"><a class="header__logo logo"><img src="assets/img/logo.png"></a>
+          <form class="header__search search column large-5" action="">
+            <input class="search__field" placeholder="Поиск товара" type="text">
+            <input class="search__submit" type="submit" value="">
+          </form>
+          <div class="header__contacts column large-2"><a class="header__tel tel" href="tel:+74996382929">8 (499) 638-29-29</a><a class="header__callback callback" href="#">Обратный звонок</a></div>
+        </div>
+      </div>
     </header>
-    <div class="row">
-      <div class="column">appended</div>
-    </div>
-    <div class="row">
-      <div class="column">appended</div>
-    </div>
     <div class="row">
       <aside class="sidebar-left column large-3 show-for-large">sidebar</aside>
       <main class="column">
@@ -35,44 +37,6 @@
             <li><span>article</span></li>
           </ul>
         </nav>
-        <h1>h1</h1>
-        <h2>h2</h2>
-        <h3>h3</h3>
-        <h4>h4</h4>
-        <h5>h5</h5>
-        <p>paragraph</p>
-        <table>
-          <tbody>
-            <tr>
-              <td>td</td>
-              <td>td</td>
-              <td>td</td>
-            </tr>
-            <tr>
-              <td>td</td>
-              <td>td</td>
-              <td>td</td>
-            </tr>
-            <tr>
-              <td>td</td>
-              <td>td</td>
-              <td>td</td>
-            </tr>
-          </tbody>
-        </table>
-        <ul>
-          <li>list</li>
-          <li>list</li>
-          <li>list</li>
-        </ul>
-        <form>
-          <input type="text">
-          <select>
-            <option>option 1</option>
-            <option>option 2</option>
-            <option>option 3</option>
-          </select>
-        </form>
       </main>
       <div class="column large-3">
         <div class="test1">test1
@@ -83,5 +47,8 @@
     <footer class="site-footer row">
       <div class="column">footer</div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/assets/js/foundation.min.js"></script>
+    <script src="/assets/js/libs.js"></script>
   </body>
 </html>
