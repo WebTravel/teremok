@@ -1,0 +1,34 @@
+.header {
+  &__location {
+    span {
+      background-image: svg-load('local.svg');
+    }
+  }
+  &__favorites {
+    background-image: svg-load('favorite.svg');
+    @include breakpoint(large) {
+      &:hover {
+        background-image: svg-load('favorite-active.svg');
+      }
+    }
+  }
+  &__compare {
+    background-image: svg-load('compare.svg');
+  }
+  &__cart:before {
+    background-image: svg-load('cart.svg');
+  }
+}
+
+.search {
+  &__submit {
+    background-image: svg-load('search.svg');
+  }
+  &__field:focus + &__submit, &__field:active + &__submit {
+    background-image: svg-load('search-active.svg');
+  }
+}
+
+.callback {
+  background-image: svg-load('phone.svg');
+}
