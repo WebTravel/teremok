@@ -1,7 +1,47 @@
 block footer
-  footer.site-footer.row
-    .column
-      | footer
-  script(src='https://code.jquery.com/jquery-3.1.1.min.js')
+  footer
+    .row.flex.jcsb
+      .column.footer__info
+        a.footer__logo(href="#")
+          img(src="assets/img/footer-logo.png", alt="")
+        a.footer__phone(href="tel:+74996382929") 8 (499) 638-29-29
+        a.footer__callback.callback(href="#") Обратный звонок
+        a.footer__email(href="mailto: info@termostok.ru") info@termostok.ru
+        .footer__address Москва, 1-ый км Калужского  шоссе, ТР "Славянский Град"
+      .column.footer__menu
+        .footer__menu--title О компании
+        nav.footer__menu--list
+          a(href="#") О компании
+          a(href="#") Новости
+          a(href="#") Бренды
+          a(href="#") Контакты
+      .column.footer__menu.footer__menu--two
+        .footer__menu--title Информация
+        nav.footer__menu--list
+          a(href="#") Доставка и оплата
+          a(href="#") Гарантия на товары
+          a(href="#") Сервисные центры
+          a(href="#") Договор оферты
+          a(href="#") Сертификаты
+      .column.footer__menu--three
+        .footer__menu
+          .footer__menu--title Мы принимаем
+          nav.footer__menu--list.flex.jcsb.aic
+            a(href="#" class="visa")
+            a(href="#" class="mastercard")
+            a(href="#" class="yaMoney")
+            a(href="#" class="rambler")
+            a(href="#" class="qiwi")
+        a.market(href="#")
+          img(src="assets/img/market.jpg") 
+    .footer__bottom
+      .row 
+        .column &copy; ООО "Термосток" 2012-2017
+         
+
+
+  script(src='https://code.jquery.com/jquery-1.12.4.min.js')
   script(src='/assets/js/foundation.min.js')
   script(src='/assets/js/libs.js')
+  script(src='/assets/js/mobileMenu.js')
+  script(src='/assets/js/script.js')

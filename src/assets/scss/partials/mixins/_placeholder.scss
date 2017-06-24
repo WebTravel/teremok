@@ -1,4 +1,5 @@
 %linkNone {
+  text-decoration: underline;
   &:hover {
     @include breakpoint(large) {
       text-decoration: none;
@@ -32,6 +33,8 @@
 }
 
 %line {
+  position: relative;
+  padding-bottom: rem-calc(10);
   &:after {
     width: 2.313rem;
     height: 0.313rem;
@@ -43,4 +46,56 @@
     bottom: -2px;
   }
 }
-  
+
+%blockLarge {
+  @include breakpoint(large down) {
+    & {
+      display: block;
+      > div {
+        width: 100%;
+        margin-bottom: rem-calc(20);
+        margin-right: 0;
+        margin-left: 0;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+      }
+    } 
+  }
+}
+
+%blockMedium {
+  @include breakpoint(small down) {
+    & {
+      display: block;
+      > div {
+        width: 100%;
+        margin-bottom: rem-calc(20);
+        margin-right: 0;
+        margin-left: 0;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+      }
+    } 
+  }
+}
+
+%italic {
+  color: #4c8eda;
+  font-family: $fontTwo, Arial, sans-serif;;
+  font-size: 0.875rem;
+  font-style: italic;
+  border-bottom: 1px dotted;
+  text-decoration: none;
+  font-weight: 400;
+  display: inline-block;
+  height: 21px;
+  box-sizing: border-box;
+  @include breakpoint(large) {
+    &:hover {
+      border-bottom: 1px transparent;
+      height: 21px;
+    }
+  }
+}

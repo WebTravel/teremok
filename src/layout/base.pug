@@ -7,13 +7,11 @@ html(lang='ru')
   body
     block header
       include ../partials/header.pug
+    block menu
+      include ../partials/blocks/menu.pug
     block content
-      .row
-        block sidebar-left
-          include ../partials/blocks/sidebar-left.pug
-        main.column
+      .content
+        main
           block main
-        block sidebar-right
-          include ../partials/blocks/sidebar-right.pug
     block footer
       include ../partials/footer.pug

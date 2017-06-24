@@ -1,0 +1,218 @@
+footer {
+  background-color: $baseColor;
+  color: $white;
+  a {
+    display: block;
+    color: $white;
+  }
+  .callback {
+    color: $white;
+    margin-bottom: rem-calc(17);
+    @extend %linkNone;
+  }
+  > .row {
+    padding: rem-calc(64) 0 rem-calc(34) 0;
+    @extend %blockMedium;
+    .column {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.footer {
+  &__info {
+    width: 261px;
+  }
+  &__logo {
+    margin-bottom: rem-calc(51);
+    @extend %opacity;
+    img {
+      max-width: 100%;
+    }
+  }
+  &__phone {
+    font-size: 1.25rem;
+    margin-bottom: rem-calc(7);
+    @extend %opacity;
+  }
+  &__bottom {
+    background-color: #54585b;
+    color: #8e9193;
+    font-size: 0.875rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    text-align: right;
+    letter-spacing: 1px;
+  }
+  &__email {
+    padding: rem-calc(17) 0;
+    margin-bottom: rem-calc(17);
+    position: relative;
+    @extend %linkNone;
+    &:before, &:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: #7d8387;
+      background: -moz-linear-gradient(top, #7d8387 0%, #7d8387 51%, #000000 52%, #000000 100%);
+      background: -webkit-linear-gradient(top, #7d8387 0%,#7d8387 51%,#000000 52%,#000000 100%);
+      background: linear-gradient(to bottom, #7d8387 0%,#7d8387 51%,#000000 52%,#000000 100%);
+      position: absolute;
+      left: 0;
+    }
+    &:after {
+      bottom: -1px;
+    }
+    &:before {
+      top: -1px;
+    }
+  }
+  &__address {
+    color: $white;
+    line-height: 1.25;
+  }
+  &__menu {
+    width: 180px;
+    &--two {
+      width: 200px;
+    }
+    &--three {
+      width: 212px;
+      .footer__menu {
+        max-width: 100%;
+      }
+      a {
+        background-repeat: no-repeat;
+        @extend %opacity;
+      }
+    }
+    &--title {
+      @extend %line;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: rem-calc(20);
+      letter-spacing: 1px;
+      width: 100%;
+      white-space: nowrap;
+    }
+    &--list {
+      a {
+        line-height: 2.25rem;
+        @extend %linkUnder;
+      }
+    }
+  }
+}
+
+.visa {
+  width: 45px;
+  height: 15px;
+  background-position: 0 -3px;
+}
+
+.mastercard {
+  width: 29px;
+  height: 20px;
+  background-position: -57px -1px;
+}
+
+.yaMoney {
+  width: 23px;
+  height: 21px;
+  background-position: -96px -1px;
+}
+
+.rambler {
+  width: 23px;
+  height: 23px;
+  background-position: -132px 0px;
+}
+
+.qiwi {
+  width: 24px;
+  height: 23px;
+  background-position: -167px 0px;
+}
+
+.market {
+  display: block;
+  margin-top: rem-calc(45);
+  img {
+    max-width: 100%;
+  }
+}
+
+
+//adaptive
+@media(max-width: 880px) {
+  footer > .row .column.footer__menu--two {
+    flex: 0 0 50%;
+    padding-top: 2rem;
+  }
+  footer > .row .column.footer__menu--three {
+    padding-top: 2rem;
+  }
+}
+
+@include breakpoint(small down) {
+  footer > .row .column.footer__menu--two, footer > .row .column.footer__menu--three {
+    padding-top: 0;
+  }
+  footer > .row {
+    padding-top: rem-calc(50);
+    > div.footer__info {
+      margin-bottom: rem-calc(35);
+      padding-bottom: 1.0625rem;
+      border-bottom: 1px solid #545658;
+    }
+  }
+  footer .callback {
+    font-size: rem-calc(26);
+    font-weight: 300;
+  }
+  .footer {
+    &__phone {
+      font-size: rem-calc(36);
+      margin-bottom: rem-calc(15);
+      font-weight: 300;
+    }
+    &__email {
+      font-size: rem-calc(30);
+      margin-bottom: rem-calc(26);
+      font-weight: 300;
+    }
+    &__address {
+      font-size: rem-calc(26);
+      font-weight: 300;
+    }
+    &__menu {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: rem-calc(44) !important;
+      nav a {
+        font-size: rem-calc(22);
+      }
+      &--title {
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+        cursor: pointer;
+        font-size: rem-calc(30);
+        padding-bottom: rem-calc(15);
+        background-size: rem-calc(36);
+      }
+      &--list {
+        display: none;
+      }
+      &--three {
+        nav a {
+          display: inline-block;
+          vertical-align: top;
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

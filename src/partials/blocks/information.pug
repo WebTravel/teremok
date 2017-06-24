@@ -1,0 +1,24 @@
+- var image = 'assets/img/inform'
+mixin inform(title, desc, bg)
+  .column.large-4.medium-6.small-12.information__item.information__item--view1
+    a(style=bg, href="#")
+      span.information__name #{title}
+      span.information__info #{desc}
+      span.information__item--link Читать далее
+.information
+  .column
+    .information__title.flex.jcsb.aic
+      .information__name Полезная информация
+      a.information__link(href="#") Перейти в раздел
+  .information__list.flex.jcsc
+    +inform('Выбор проточного водонагревателя', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', "background-image: url(assets/img/inform1.jpg)")
+    +inform('Выбор проточного водонагревателя', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', "background-image: url(assets/img/inform2.jpg)")
+    .column.large-4.medium-6.small-12.information__item.information__item--view2
+      a(style="background-image: url(assets/img/inform3.jpg)", href="#")
+        span.information__name Выбор проточного  водонагревателя
+        span.information__item--link Читать далее
+    .column.large-12.medium-12.small-12.information__item.information__item--view3
+      a(style="background-image: url(assets/img/inform4.jpg)", href="#")
+        span.information__name Выбор проточного  водонагревателя
+        span.information__info Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        span.information__item--link Читать далее

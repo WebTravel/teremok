@@ -1,9 +1,25 @@
 extends ../layout/base.pug
 block prepend head
   -var title = 'Главная';
-block sidebar-right
-  .column.large-3
-    .test1 test1
-      .test2 test2
 block main
-    +breadcrumbs(['section', 'article'])
+    //- +breadcrumbs(['section', 'article'])
+    .slider
+      .slider__item.slider__one(style="background-image: url(assets/img/mainImg.jpg)")
+        a(href="#" class="slider__link")
+          .row
+            .slider__text
+              span.slider__name Gekon
+              span.slider__slogan Радиаторы алюминивые
+              span.slider__description Сделано в России
+      .slider__item.slider__two(style="background-image: url(assets/img/mainImg.jpg)")
+        a(href="#" class="slider__link")
+          .row
+            .slider__text
+              span.slider__name Gekon
+              span.slider__slogan Радиаторы алюминивые
+              span.slider__description Сделано в России
+    .row
+      block advantages
+        include ../partials/blocks/advantages.pug
+      block information
+        include ../partials/blocks/information.pug

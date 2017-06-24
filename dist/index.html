@@ -12,43 +12,167 @@
   <body>
     <header class="header">
       <div class="header__top">
-        <div class="row flex jcsb aic"><a class="column small-6 header__logo logo" href="/"><img src="assets/img/logo.png"></a>
+        <div class="row flex jcsb aic"><a class="column small-7 header__logo logo" href="/"><img src="assets/img/logo.png"></a>
           <div class="column large-2 header__location"><span>Ваш город: <a href="#">Москва</a></span></div>
           <div class="column large-5 medium-8 small-4 flex jcsb aic header__info"><a class="header__favorites favorites" href="#">Избранное<span id="favorites__count">5</span></a><a class="header__compare" href="#">Сравнение</a><a class="header__cart" href="#">Корзина<span id="header__cart--count">5</span></a></div>
         </div>
       </div>
       <div class="header__main">
         <div class="row flex jcsb aic"><a class="column large-3 medium-3 header__logo logo" href="/"><img src="assets/img/logo.png"></a>
-          <form class="column large-5 medium-5 header__search search" action="">
+          <div class="header__button"><span class="toggle js-toggle"><span><em></em><em></em><em></em></span></span></div>
+          <form class="column large-5 header__search search" action="">
             <input class="search__field" placeholder="Поиск товара" type="text">
             <input class="search__submit" type="submit" value="">
           </form>
-          <div class="column large-2 medium-3 header__contacts"><a class="header__tel tel" href="tel:+74996382929">8 (499) 638-29-29</a><a class="header__callback callback" href="#"><span>Обратный звонок</span></a></div>
+          <div class="column large-2 header__contacts"><a class="header__tel tel" href="tel:+74996382929">8 (499) 638-29-29</a><a class="header__callback callback" href="#"><span>Обратный звонок</span></a></div>
         </div>
       </div>
     </header>
-    <div class="row">
-      <aside class="sidebar-left column large-3 show-for-large">sidebar</aside>
-      <main class="column">
-        <nav aria-label="Вы находитесь здесь:" role="navigation">
-          <ul class="breadcrumbs">
-            <li><a href="/">Главная</a></li>
-            <li><a href="#">section</a></li>
-            <li><span>article</span></li>
+    <div class="menu">
+      <div class="row">
+        <div class="multilevelOverlay js-overlay"></div>
+        <nav class="column menu__wrapper">
+          <ul class="flex jcsb menu">
+            <li><a href="#">Каталог товаров</a>
+              <ul>
+                <li><a href="#">Отопление</a></li>
+                <li><a href="#">Водоснабжение и подогрев</a>
+                  <ul>
+                    <li><a href="#">Обогреватели</a></li>
+                    <li><a href="#">Предохранительная арматура</a>
+                      <ul>
+                        <li><a href="#">Термоманометры</a></li>
+                        <li><a href="#">Термометры биметаллические</a></li>
+                        <li><a href="#">Манометры</a></li>
+                        <li><a href="#">Воздухоотводчики</a></li>
+                        <li><a href="#">Редукторы давления</a></li>
+                        <li><a href="#">Перепускные клапаны</a></li>
+                        <li><a href="#">Предохранительные клапаны</a></li>
+                        <li><a href="#">Группы безопасности</a></li>
+                        <li><a href="#">Деаэраторы</a></li>
+                        <li><a href="#">Грязеуловители (дешламаторы)</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Радиаторы отопления (батарея)</a></li>
+                    <li><a href="#">Расширительные баки</a></li>
+                    <li><a href="#">Котлы отопления</a></li>
+                    <li><a href="#">Полотенцесушителя</a></li>
+                    <li><a href="#">Котельное оборудование</a></li>
+                    <li><a href="#">Трубы и фитинги</a></li>
+                    <li><a href="#">Конвекторы</a></li>
+                    <li><a href="#">Регулирующая арматура</a></li>
+                    <li><a href="#">Теплотрассы</a></li>
+                    <li><a href="#">Теплоноситель для системы отопления</a></li>
+                    <li><a href="#">Запорная арматура</a>
+                      <ul>
+                        <li><a href="#">Термоманометры</a></li>
+                        <li><a href="#">Термометры биметаллические</a></li>
+                        <li><a href="#">Манометры</a></li>
+                        <li><a href="#">Воздухоотводчики</a></li>
+                        <li><a href="#">Редукторы давления</a></li>
+                        <li><a href="#">Перепускные клапаны</a></li>
+                        <li><a href="#">Предохранительные клапаны</a></li>
+                        <li><a href="#">Группы безопасности</a></li>
+                        <li><a href="#">Деаэраторы</a></li>
+                        <li><a href="#">Грязеуловители (дешламаторы)</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#">Канализация и дренаж</a></li>
+                <li><a href="#">Тепло- и шумоизоляция</a></li>
+                <li><a href="#">Инструмент и крепеж</a></li>
+                <li><a href="#">Электрика и свет</a></li>
+                <li><a href="#">Сантехника</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Бренды</a></li>
+            <li><a href="#">Контакты</a></li>
           </ul>
         </nav>
-      </main>
-      <div class="column large-3">
-        <div class="test1">test1
-          <div class="test2">test2</div>
-        </div>
       </div>
     </div>
-    <footer class="site-footer row">
-      <div class="column">footer</div>
+    <div class="content">
+      <main>
+        <div class="slider">
+          <div class="slider__item slider__one" style="background-image: url(assets/img/mainImg.jpg);"><a class="slider__link" href="#">
+              <div class="row">
+                <div class="slider__text"><span class="slider__name">Gekon</span><span class="slider__slogan">Радиаторы алюминивые</span><span class="slider__description">Сделано в России</span></div>
+              </div></a></div>
+          <div class="slider__item slider__two" style="background-image: url(assets/img/mainImg.jpg);"><a class="slider__link" href="#">
+              <div class="row">
+                <div class="slider__text"><span class="slider__name">Gekon</span><span class="slider__slogan">Радиаторы алюминивые</span><span class="slider__description">Сделано в России</span></div>
+              </div></a></div>
+        </div>
+        <div class="row">
+          <div class="flex aic jcsb advantages">
+                      <div class="advantages__item column large-3 medium-6 small-12"><img class="advantages__img" src="assets/img/adv1.svg" alt="">
+                        <div class="advantages__name">Бесплатная доставка</div>
+                        <div class="advantages__desc">По России</div>
+                      </div>
+                      <div class="advantages__item column large-3 medium-6 small-12"><img class="advantages__img" src="assets/img/adv2.svg" alt="">
+                        <div class="advantages__name">24/7</div>
+                        <div class="advantages__desc">Техническая поддержка</div>
+                      </div>
+                      <div class="advantages__item column large-3 medium-6 small-12"><img class="advantages__img" src="assets/img/adv3.svg" alt="">
+                        <div class="advantages__name">Гарантия</div>
+                        <div class="advantages__desc">Возврат денег</div>
+                      </div>
+                      <div class="advantages__item column large-3 medium-6 small-12"><img class="advantages__img" src="assets/img/adv4.svg" alt="">
+                        <div class="advantages__name">Отличные отзывы</div>
+                        <div class="advantages__desc">Наших клиентов</div>
+                      </div>
+          </div>
+          <div class="information">
+            <div class="column">
+              <div class="information__title flex jcsb aic">
+                <div class="information__name">Полезная информация</div><a class="information__link" href="#">Перейти в раздел</a>
+              </div>
+            </div>
+            <div class="information__list flex jcsc">
+                        <div class="column large-4 medium-6 small-12 information__item information__item--view1"><a style="background-image: url(assets/img/inform1.jpg);" href="#"><span class="information__name">Выбор проточного водонагревателя</span><span class="information__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="information__item--link">Читать далее</span></a></div>
+                        <div class="column large-4 medium-6 small-12 information__item information__item--view1"><a style="background-image: url(assets/img/inform2.jpg);" href="#"><span class="information__name">Выбор проточного водонагревателя</span><span class="information__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="information__item--link">Читать далее</span></a></div>
+              <div class="column large-4 medium-6 small-12 information__item information__item--view2"><a style="background-image: url(assets/img/inform3.jpg);" href="#"><span class="information__name">Выбор проточного  водонагревателя</span><span class="information__item--link">Читать далее</span></a></div>
+              <div class="column large-12 medium-12 small-12 information__item information__item--view3"><a style="background-image: url(assets/img/inform4.jpg);" href="#"><span class="information__name">Выбор проточного  водонагревателя</span><span class="information__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><span class="information__item--link">Читать далее</span></a></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="row flex jcsb">
+        <div class="column footer__info"><a class="footer__logo" href="#"><img src="assets/img/footer-logo.png" alt=""></a><a class="footer__phone" href="tel:+74996382929">8 (499) 638-29-29</a><a class="footer__callback callback" href="#">Обратный звонок</a><a class="footer__email" href="mailto: info@termostok.ru">info@termostok.ru</a>
+          <div class="footer__address">Москва, 1-ый км Калужского  шоссе, ТР "Славянский Град"</div>
+        </div>
+        <div class="column footer__menu">
+          <div class="footer__menu--title">О компании</div>
+          <nav class="footer__menu--list"><a href="#">О компании</a><a href="#">Новости</a><a href="#">Бренды</a><a href="#">Контакты</a></nav>
+        </div>
+        <div class="column footer__menu footer__menu--two">
+          <div class="footer__menu--title">Информация</div>
+          <nav class="footer__menu--list"><a href="#">Доставка и оплата</a><a href="#">Гарантия на товары</a><a href="#">Сервисные центры</a><a href="#">Договор оферты</a><a href="#">Сертификаты</a></nav>
+        </div>
+        <div class="column footer__menu--three">
+          <div class="footer__menu">
+            <div class="footer__menu--title">Мы принимаем</div>
+            <nav class="footer__menu--list flex jcsb aic"><a class="visa" href="#"></a><a class="mastercard" href="#"></a><a class="yaMoney" href="#"></a><a class="rambler" href="#"></a><a class="qiwi" href="#"></a></nav>
+          </div><a class="market" href="#"><img src="assets/img/market.jpg"></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="row"> 
+          <div class="column">&copy; ООО "Термосток" 2012-2017</div>
+        </div>
+      </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="/assets/js/foundation.min.js"></script>
     <script src="/assets/js/libs.js"></script>
+    <script src="/assets/js/mobileMenu.js"></script>
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>

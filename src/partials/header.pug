@@ -2,7 +2,7 @@ block header
   header.header
     .header__top
       .row.flex.jcsb.aic
-        a.column.small-6.header__logo.logo(href="/")
+        a.column.small-7.header__logo.logo(href="/")
           img(src="assets/img/logo.png")
         .column.large-2.header__location
           span
@@ -18,10 +18,16 @@ block header
       .row.flex.jcsb.aic
         a.column.large-3.medium-3.header__logo.logo(href="/")
           img(src="assets/img/logo.png")
-        form.column.large-5.medium-5.header__search.search(action="")
+        .header__button
+          span.toggle.js-toggle
+            span
+              em
+              em
+              em
+        form.column.large-5.header__search.search(action="")
           input.search__field(placeholder="Поиск товара" type="text")
           input.search__submit(type="submit" value="")
-        .column.large-2.medium-3.header__contacts
+        .column.large-2.header__contacts
           a.header__tel.tel(href="tel:+74996382929") 8 (499) 638-29-29
           a.header__callback.callback(href="#")
             span Обратный звонок

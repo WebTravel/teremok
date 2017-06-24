@@ -32,3 +32,43 @@
 .callback {
   background-image: svg-load('phone.svg');
 }
+
+.footer__menu--three  nav > a {
+  background-image: inline('payment.png');
+}
+
+.menu {
+  > li {
+    &:first-child {
+      background-image: svg-load('humb.svg');
+      > ul > li {
+        background-image: svg-load('menu.svg');
+      }
+    }
+    &:nth-child(2) {
+      background-image: svg-load('discount.svg');
+    }
+  }
+}
+
+.slick-prev, .slick-prev:hover, .slick-next, .slick-next:hover {
+  background-image: inline('back.png');
+}
+
+.information {
+  &__title {
+    background-image: svg-load('information.svg');
+  }
+}
+
+
+
+//adaptive
+@include breakpoint(small down) {
+  .footer__menu--title {
+    background-image: svg-load('plus.svg');
+    &.active {
+      background-image: svg-load('minus.svg');
+    }
+  }
+}

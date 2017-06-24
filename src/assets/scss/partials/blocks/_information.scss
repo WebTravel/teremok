@@ -1,0 +1,32 @@
+.information {
+  margin-bottom: rem-calc(60);
+  width: 100%;
+  &__title {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.125rem;
+    padding: rem-calc(13) 0 rem-calc(13) rem-calc(60);
+    margin-bottom: rem-calc(40);
+  }
+  &__link {
+    @extend %italic;
+  }
+  &__list {
+    flex-wrap: wrap;
+  }
+  &__item {
+    background-repeat: no-repeat;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    a {
+      @extend %opacity;
+      display: block;
+    }
+    span {
+      display: block;
+    }
+  }
+}

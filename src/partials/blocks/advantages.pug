@@ -1,0 +1,12 @@
+- var image = "assets/img/adv"
+mixin advantage(imageID, title, desc)
+  .advantages__item.column.large-3.medium-6.small-12
+    img.advantages__img(src=image+imageID+'.svg', alt="")
+    .advantages__name #{title}
+    .advantages__desc #{desc}
+
+.flex.aic.jcsb.advantages
+  +advantage(1, 'Бесплатная доставка', 'По России')
+  +advantage(2, '24/7', 'Техническая поддержка')
+  +advantage(3, 'Гарантия', 'Возврат денег')
+  +advantage(4, 'Отличные отзывы', 'Наших клиентов')

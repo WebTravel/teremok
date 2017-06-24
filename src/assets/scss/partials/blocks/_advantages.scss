@@ -1,0 +1,36 @@
+.advantages {
+  margin-bottom: rem-calc(26);
+  width: 100%;
+  flex-wrap: wrap;
+  &__item {
+    margin-bottom: rem-calc(20);
+  }
+  &__name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  &__desc {
+    font-size: 1.125rem;
+    color: $medium-gray;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  &__img {
+    margin-bottom: rem-calc(20);
+  }
+}
+
+
+//adaptive
+@include breakpoint(small down) {
+  .advantages {
+    &__item {
+      &:not(:nth-child(1)) {
+        display: none;
+      }
+    }
+  }
+}

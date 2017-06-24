@@ -27,6 +27,13 @@
   }
   &__info {
     height: 100%;
+    padding-right: 0;
+  }
+  &__button {
+    display: none;
+    position: relative;
+    width: 105px;
+    height: 89px;
   }
   &__cart {
     background-color: $buttonBorder;
@@ -109,6 +116,7 @@
     }
   }
   &__contacts {
+    padding-right: 0;
     a {
       display: block;
       &.header__tel {
@@ -195,6 +203,27 @@
       min-width: 0;
       max-width: 190px;
     }
+    &__button {
+      display: block;
+      order: -1;
+    }
+    &__logo {
+      display: none;
+    }
+    &__main {
+      > .row {
+        background: #393d40;
+        padding: 0;
+      }
+    }
+    &__contacts {
+      a {
+        color: white
+      }
+      a.header__tel {
+        color: $white
+      }
+    }
   }
 }
 
@@ -207,9 +236,17 @@
       z-index: 3;
       background: $white;
       top: 0;
+      left: 0;
       .logo {
         display: block;
       }
+    }
+    &__main {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      z-index: 3;
     }
     &__favorites, &__compare {
       display: none;
@@ -222,13 +259,16 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 30px;
-        height: 30px;
-        background-size: 30px;
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
       }
       span {
-        left: 55%;
-        top: 30%;
+        left: 60%;
+        top: 15%;
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
       }
     }
     &__info {
@@ -247,5 +287,28 @@
         display: none;
       }
     }
+  }
+
+  .search {
+    &__field {
+      height: 58px;
+      font-size: 1.5rem
+    }
+  }
+}
+
+@media(max-width: 480px) {
+  .search {
+    &__field {
+      height: 36px;
+      font-size: 1rem
+    }
+  }
+  .header__button {
+    height: 49px;
+    width: 70px;
+  }
+  span.toggle {
+    padding: 12px 20px 12px 20px !important;
   }
 }

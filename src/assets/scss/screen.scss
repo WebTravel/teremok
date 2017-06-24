@@ -6,6 +6,13 @@
 @include foundation-flex-grid();
 
 @import 'partials/blocks/header';
+@import 'partials/blocks/footer';
+@import 'partials/blocks/menu';
+@import 'partials/components/slick-theme.scss';
+@import 'partials/components/slick.scss';
+@import 'partials/blocks/slider';
+@import 'partials/blocks/advantages';
+@import 'partials/blocks/information';
 
 //@include foundation-everything(true)
 //@include foundation-global-styles;
