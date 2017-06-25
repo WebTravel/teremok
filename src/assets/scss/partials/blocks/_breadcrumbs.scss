@@ -1,0 +1,36 @@
+.breadcrumbs {
+  width: 100%;
+  padding: rem-calc(17) 0;
+  width: 100%;
+  border-bottom: 1px solid $borderColor;
+  &__wrapper {
+    display: block;
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      padding: rem-calc(23) 0;
+    }
+  }
+  a {
+    color: #9c9c9c;
+    font-size: 0.875rem;
+    border-bottom: 1px dotted;
+    margin-right: 20px;
+    position: relative;
+    @include breakpoint(large) {
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
+    }
+    &:after {
+      content: '\2022';
+      position: absolute;
+      top: 3px;
+      right: -10px;
+    }
+  }
+  span {
+    color: #9c9c9c;
+    font-size: 0.875rem;
+  }
+}

@@ -1,0 +1,76 @@
+nav.leftMenu
+  ul
+    li: a(href="#") Обогреватели
+    li
+      a(href="#") Предохранительная арматура
+        span &rsaquo;
+      ul 
+        li: a(href="#") Термоманометры
+        li: a(href="#") Термометры биметаллические
+        li: a(href="#") Манометры
+        li: a(href="#") Воздухоотводчики
+        li: a(href="#") Редукторы давления
+        li: a(href="#") Перепускные клапаны
+        li: a(href="#") Предохранительные клапаны
+        li: a(href="#") Группы безопасности
+        li: a(href="#") Деаэраторы
+        li: a(href="#") Грязеуловители (дешламаторы)
+    li: a(href="#") Радиаторы отопления (батарея)
+    li: a(href="#") Расширительные баки
+    li: a(href="#") Котлы отопления
+    li: a(href="#") Полотенцесушителя
+    li: a(href="#") Котельное оборудование
+    li: a(href="#") Трубы и фитинги
+    li: a(href="#") Конвекторы
+    li: a(href="#") Регулирующая арматура
+    li: a(href="#") Теплотрассы
+    li: a(href="#") Запорная арматура
+
+.filter
+  .filter__item
+    .filter__name Цена
+    .filter__body.filter__price
+      #slider.uiSlider
+      .uiSlider__input.flex.jcsb.aic
+        input(type="text" placeholder="0" id="minCost" value="0")
+        span &mdash;
+        input(type="text" placeholder="0" id="maxCost" value="1000")
+  
+  .filter__item
+    .filter__name Производители
+    .filter__body.filter__company
+      .filter__company--item
+        input(type="checkbox" id="company1")
+        label(for="company1") Название
+      .filter__company--item
+        input(type="checkbox" id="company2" checked)
+        label(for="company2") Название
+      .filter__company--item
+        input(type="checkbox" id="company3")
+        label(for="company3") Название
+      .filter__company--item
+        input(type="checkbox" id="company4")
+        label(for="company4") Название
+      .filter__company--item
+        input(type="checkbox" id="company5")
+        label(for="company5") Название
+    .filter__toggle + Развернуть
+
+  .filter__item
+    .filter__name Параметр
+    .filter__body.filter__params
+      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit enim quisquam eius doloremque saepe aperiam adipisci expedita aspernatur magnam praesentium, recusandae porro veritatis! Dolor ad, aliquam soluta sed animi sequi.
+
+  .filter__item
+    .filter__name Параметр
+    .filter__body.filter__params
+      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit enim quisquam eius doloremque saepe aperiam adipisci expedita aspernatur magnam praesentium, recusandae porro veritatis! Dolor ad, aliquam soluta sed animi sequi.
+
+  .filter__item
+    .filter__name Параметр
+    .filter__body.filter__params
+      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit enim quisquam eius doloremque saepe aperiam adipisci expedita aspernatur magnam praesentium, recusandae porro veritatis! Dolor ad, aliquam soluta sed animi sequi.
+  
+  button.filter__button.mainButtons Применить
+  button.filter__clear Очистить фильтр
+      

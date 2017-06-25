@@ -28,6 +28,13 @@
   }
 }
 
+.filter__name {
+  background-image: svg-load('filterMinus.svg');
+  &.no-active {
+    background-image: svg-load('filterPlus.svg');
+  }
+}
+
 .search {
   &__submit {
     background-image: svg-load('search.svg');
