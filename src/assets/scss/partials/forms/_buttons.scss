@@ -1,0 +1,15 @@
+.follow {
+  input[type="submit"] {
+    border-radius: $bigBr;
+    cursor: pointer
+  }
+}
+
+.mainButtons {
+  @extend %button;
+  @include breakpoint(large) {
+    &:hover {
+      background: #ff4f00;
+    }
+  }
+}

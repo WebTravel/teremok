@@ -99,3 +99,10 @@
     }
   }
 }
+
+%button {
+  background-color: $buttonBorder;
+  background-image: linear-gradient(-10deg, $buttonOne 0%, $buttonTwo 100%);
+  color: $white;
+  border: none;
+}

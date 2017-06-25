@@ -4,20 +4,23 @@
       background-image: svg-load('local.svg');
     }
   }
-  &__favorites {
-    background-image: svg-load('favorite.svg');
-    @include breakpoint(large) {
-      &:hover {
-        background-image: svg-load('favorite-active.svg');
-      }
+}
+
+.product__buy:before, .header__cart:before {
+  background-image: svg-load('cart.svg');
+}
+
+.product__favorites, .header__favorites {
+  background-image: svg-load('favorite.svg');
+  @include breakpoint(large) {
+    &:hover {
+      background-image: svg-load('favorite-active.svg');
     }
   }
-  &__compare {
-    background-image: svg-load('compare.svg');
-  }
-  &__cart:before {
-    background-image: svg-load('cart.svg');
-  }
+}
+
+.product__compare, .header__compare {
+  background-image: svg-load('compare.svg');
 }
 
 .search {
@@ -61,6 +64,16 @@
   }
 }
 
+.follow__info {
+  background-image: svg-load('telegram.svg');
+}
+
+.product {
+  .slick-next, .slick-prev {
+    background-image: inline('next.png');
+  }
+}
+
 
 
 //adaptive
@@ -69,6 +82,11 @@
     background-image: svg-load('plus.svg');
     &.active {
       background-image: svg-load('minus.svg');
+    }
+  }
+  .catalog {
+    &__name {
+      background-image: svg-load('catIcon.svg');
     }
   }
 }

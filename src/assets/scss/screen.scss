@@ -2,27 +2,37 @@
 @import 'partials/mixins/placeholder';
 @import 'base/reset';
 //@import 'base/icons';
+
+//component-styles
+@import 'partials/components/slick-theme.scss';
+@import 'partials/components/slick.scss';
+
 @import 'foundation';
 @include foundation-flex-grid();
+@include foundation-tabs;
 
 @import 'partials/blocks/header';
 @import 'partials/blocks/footer';
 @import 'partials/blocks/menu';
-@import 'partials/components/slick-theme.scss';
-@import 'partials/components/slick.scss';
 @import 'partials/blocks/slider';
 @import 'partials/blocks/advantages';
 @import 'partials/blocks/information';
+@import 'partials/blocks/follow';
+@import 'partials/forms/buttons';
+@import 'partials/blocks/tabss';
+@import 'partials/blocks/rating';
+
+@import 'pages/home';
 
 //@include foundation-everything(true)
 //@include foundation-global-styles;
 
-//@include foundation-flex-classes;
-//@include foundation-typography-base;
-//@include foundation-typography;
-//@include foundation-table;
-//@include foundation-visibility-classes;
-//@include foundation-breadcrumbs;
+// @include foundation-flex-classes;
+// @include foundation-typography-base;
+// @include foundation-containers;
+// @include foundation-table;
+// @include foundation-visibility-classes;
+// @include foundation-breadcrumbs;
 
 
 * {

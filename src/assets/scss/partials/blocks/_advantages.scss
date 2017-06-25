@@ -25,11 +25,16 @@
 
 
 //adaptive
-@include breakpoint(small down) {
+@media(max-width: 480px) {
   .advantages {
     &__item {
-      &:not(:nth-child(1)) {
-        display: none;
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: rem-calc(15);
+      text-align: center;
+      &::nth-last-child(1) {
+        margin-bottom: 0;
       }
     }
   }

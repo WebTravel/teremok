@@ -1,6 +1,10 @@
 ;(function() {
 
+
   $('document').ready(function() {
+    
+    $(document).foundation();
+
     var w = window.innerWidth ? window.innerWidth : $(window).width(),
         smallWidth = 640,
         speed = 250;
@@ -42,6 +46,62 @@
           settings: {
             arrows: false,
             dots: true
+          }
+        }
+      ]
+    });
+
+    //Слайдер брендов
+    $('.brandSlider__list').slick({
+      dots: true,
+      arrows: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1023,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
+
+    $('#product__panel2, #product__panel1').slick({
+      dots: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1023,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
           }
         }
       ]

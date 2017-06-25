@@ -8,7 +8,7 @@ mixin inform(title, desc, bg)
 .information
   .column
     .information__title.flex.jcsb.aic
-      .information__name Полезная информация
+      .information__mainName Полезная информация
       a.information__link(href="#") Перейти в раздел
   .information__list.flex.jcsc
     +inform('Выбор проточного водонагревателя', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', "background-image: url(assets/img/inform1.jpg)")
@@ -20,5 +20,6 @@ mixin inform(title, desc, bg)
     .column.large-12.medium-12.small-12.information__item.information__item--view3
       a(style="background-image: url(assets/img/inform4.jpg)", href="#")
         span.information__name Выбор проточного  водонагревателя
-        span.information__info Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        span.information__info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
         span.information__item--link Читать далее
+  a.information__link.addLink(href="#") Перейти в раздел

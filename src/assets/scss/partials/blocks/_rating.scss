@@ -1,0 +1,39 @@
+.product__rating {
+  margin-bottom: rem-calc(10);
+}
+.field-rating {
+  display: block;
+  border: none;
+  width: 85px;
+}
+.field-rating > input {
+  display: none;
+}
+.field-rating > label:before {
+  margin: 2px;
+  font-size: 0.85rem;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+.field-rating > .half-rate:before {
+  content: "\f005";
+  position: absolute;
+}
+.field-rating > label {
+  color: #c7c7c7;
+  float: right;
+  cursor: pointer;
+}
+.field-rating > input:checked ~ label, .field-rating:not(:checked) > label:hover, .field-rating:not(:checked) > label:hover ~ label {
+  color: #000;
+}
+.field-rating > input:checked + label:hover, .field-rating > input:checked ~ label:hover, .field-rating > label:hover ~ input:checked ~ label, .field-rating > input:checked ~ label:hover ~ label {
+  color: #4d4d4d;
+}
+
+.rating__count {
+  margin-left: 5px;
+  ont-size: 0.75rem;
+  color: $baseColor;
+}

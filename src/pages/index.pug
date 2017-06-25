@@ -1,6 +1,6 @@
 extends ../layout/base.pug
 block prepend head
-  -var title = 'Главная';
+  - var title = 'Главная';
 block main
     //- +breadcrumbs(['section', 'article'])
     .slider
@@ -21,5 +21,117 @@ block main
     .row
       block advantages
         include ../partials/blocks/advantages.pug
+
+    .catalog
+      .row.flex.catalog__list
+        -var image = "assets/img/cat"
+        mixin category(imageID, title)
+          .catalog__item.column.large-3.medium-6.small-12
+            a.catalog__item--body(href="#")
+              span.catalog__img--wrapper
+                img.catalog__img(src=image+imageID+'.jpg', alt="")
+              span.catalog__name #{title}
+
+        +category(1, 'Отопление')
+        +category(2, 'Водоснабжение и подогрев')
+        +category(3, 'Канализация и дренаж')
+        +category(4, 'Тепло - и шумоизоляция')
+        +category(5, 'Инструмент и крепеж')
+        +category(6, 'Электрика и свет')
+        +category(7, 'Сантехника')
+    
+    .brandSlider
+      .row.brandSlider__list
+        -var brandImg = "assets/img/brand"
+        mixin brand(brandImgID)
+          .brandSlider__item
+            img(src=brandImg+brandImgID+'.jpg', alt="")
+        
+        +brand(1)
+        +brand(2)
+        +brand(3)
+        +brand(4)
+        +brand(1)
+
+    .product
+      .row
+        ul.column.large-12.tabs.tabs__list(data-tabs id="tabs")
+          li.tabs__name.tabs-title.is-active
+            a(href="#product__panel1") Распродажа
+          li.tabs__name.tabs-title
+            a(href="#product__panel2") Акции
+        
+        .column.large-12.product__count
+          span#product__count 149
+          |  товаров
+        
+        .column.large-12.tabs-content(data-tabs-content="tabs")
+          .tabs-panel.product__list.is-active#product__panel1
+
+            -var productImg = "assets/img/product.jpg"
+            mixin product(title)
+              .product__item
+                a.product__link(href="#")
+                  span.product__img--wrapper
+                    img(src=productImg, alt="")
+                  span.product__name #{title}
+                .product__body
+                  .product__info.flex.jcsb.aic
+                    span.state В наличии
+                    a.product__favorites(href="#")
+                    a.product__compare(href="#")
+                  .product__rating.flex.aic
+                    fieldset.field-rating
+                      input(type="radio" id="star5" name="rating" value="5")
+                      label(class = "full-rate" for="star5")
+                      input(type="radio" id="star4half" name="rating" value="4 and a half")
+                      label(class="half-rate" for="star4half")
+                      input(type="radio" id="star4" name="rating" value="4" checked)
+                      label(class = "full-rate" for="star4")
+                      input(type="radio" id="star3half" name="rating" value="3 and a half")
+                      label(class="half-rate" for="star3half")
+                      input(type="radio" id="star3" name="rating" value="3")
+                      label(class="full-rate" for="star3")
+                      input(type="radio" id="star2half" name="rating" value="2 and a half" )
+                      label(class="half-rate" for="star2half")
+                      input(type="radio" id="star2" name="rating" value="2")
+                      label(class = "full-rate" for="star2")
+                      input(type="radio" id="star1half" name="rating" value="1 and a half")
+                      label(class="half-rate" for="star1half")
+                      input(type="radio" id="star1" name="rating" value="1")
+                      label(class="full-rate" for="star1")
+                      input(type="radio" id="starhalf" name="rating" value="half")
+                      label(class="half-rate" for="starhalf")
+                    .rating__count (36)
+                  .product__form.flex.jcsb.aic
+                    .product__price
+                      .product__price--count 9 750
+                        |  руб.
+                    a.product__buy.mainButtons(href="#") Купить
+            
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки')
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки с гидрострелкой')
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки с гидрострелкой')
+
+          .tabs-panel.product__list#product__panel2
+            +product('Коллектор котельной разводки')
+            +product('Коллектор котельной разводки с гидрострелкой')
+            +product('Коллектор котельной разводки')
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки с гидрострелкой')
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки с гидрострелкой')
+            +product('Коллектор котельной разводки')
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки с гидрострелкой')
+
+
+        
+    .row
       block information
         include ../partials/blocks/information.pug
+      block follow
+        include ../partials/blocks/follow.pug
