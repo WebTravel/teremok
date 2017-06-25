@@ -21,8 +21,12 @@
 @import 'partials/forms/buttons';
 @import 'partials/blocks/tabss';
 @import 'partials/blocks/rating';
+@import 'partials/blocks/leftCatalog';
+@import 'partials/blocks/sort';
+@import 'partials/blocks/paginate';
 
 @import 'pages/home';
+@import 'pages/catalog';
 
 //@include foundation-everything(true)
 //@include foundation-global-styles;

@@ -40,6 +40,14 @@
     border-right: none;
     position: relative;
     box-sizing: border-box;
+    .state {
+      color: $green;
+      font-size: 0.875rem;
+      &:before {
+        content: '\2022';
+        padding-right: 5px;
+      }
+    }
   }
   &__body {
     padding: 0 rem-calc(10);
@@ -78,14 +86,6 @@
     overflow: hidden;
     display: block;
     margin-bottom: rem-calc(20);
-  }
-  .state {
-    color: $green;
-    font-size: 0.875rem;
-    &:before {
-      content: '\2022';
-      padding-right: 5px;
-    }
   }
   &__info {
     margin-bottom: rem-calc(10);

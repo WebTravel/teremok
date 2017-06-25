@@ -12,8 +12,20 @@ block header
           a.header__favorites.favorites(href="#") Избранное
             span#favorites__count 5
           a.header__compare(href="#") Сравнение
-          a.header__cart(href="#") Корзина
-            span#header__cart--count 5
+          .header__cart Корзина
+            a(href="#")
+              span#header__cart--count 5
+            .header__products
+              ul.header__products--list
+                li.header__products--item
+                  a(href="#")
+                    span.header__products--imgWrap
+                      img(src="assets/img/cartImg.jpg", alt="")
+                    span.header__products--name Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура
+              .header__products--price.flex.jcsb
+                span Всего к оплате (руб.)
+                span.header__products--priceCount 9750
+              a.mainButtons(href="#") Перейти в корзину
     .header__main
       .row.flex.jcsb.aic
         a.column.large-3.medium-3.header__logo.logo(href="/")

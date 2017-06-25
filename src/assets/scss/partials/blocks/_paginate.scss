@@ -1,0 +1,25 @@
+.paginate {
+  text-align: center;
+  &__list {
+    text-align: center;
+    justify-content: center;
+  }
+  &__item {
+    @extend %opacity;
+    > a {
+      color: #676a6c;
+      font-size: 0.875rem;
+      text-decoration: none;
+      padding: rem-calc(6);
+      display: block;
+    }
+    &.active {
+      > a {
+        box-shadow: inset 0.063rem 0.125rem 0.25rem rgba(0, 0, 0, 0.11);
+        background-color: #dedada;
+        border-radius: 50%;
+        padding: rem-calc(6) rem-calc(10);
+      }
+    }
+  }
+}

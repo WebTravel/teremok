@@ -14,13 +14,18 @@
   background-image: svg-load('favorite.svg');
   @include breakpoint(large) {
     &:hover {
-      background-image: svg-load('favorite-active.svg');
+      background-image: svg-load('favoriteHover.svg');
     }
   }
 }
 
 .product__compare, .header__compare {
   background-image: svg-load('compare.svg');
+  @include breakpoint(large) {
+    &:hover {
+      background-image: svg-load('compareHover.svg');
+    }
+  }
 }
 
 .search {
@@ -38,6 +43,10 @@
 
 .footer__menu--three  nav > a {
   background-image: inline('payment.png');
+}
+
+select {
+  background-image: inline('select.png');
 }
 
 .menu {
@@ -71,6 +80,15 @@
 .product {
   .slick-next, .slick-prev {
     background-image: inline('next.png');
+  }
+}
+
+.sort__tabs {
+  li:first-child {
+    background-image: svg-load('sort1.svg');
+  }
+  li:last-child {
+    background-image: svg-load('sort2.svg');
   }
 }
 

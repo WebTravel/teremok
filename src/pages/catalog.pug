@@ -1,0 +1,7 @@
+extends ../layout/base-catalog.pug
+block prepend head
+  - var title = 'Каталог';
+block main
+    //- +breadcrumbs(['section', 'article'])
+    block sort
+      include ../partials/blocks/sort.pug

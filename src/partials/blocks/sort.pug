@@ -1,0 +1,104 @@
+block sort
+  .sort
+    .sort__panel.flex.jcsb.aic
+      .sort__block.flex.jcsb.aic
+        .sort__block--item
+          span Сортировать по:
+          select
+            option Цене
+            option Названию
+          select
+            option А - Я
+            option Я - А
+        .sort__block--item
+          span Учитывать:
+          select
+            option Все товары
+            option Текущую категорию
+      .sort__switch
+        ul.tabs.sort__tabs(data-tabs)#result-tabs
+          li.tabs-title.is-active.sort__tabs--title
+            a(href="#sortPanel1")
+          li.tabs-title.sort__tabs--title
+            a(href="#sortPanel2")
+    .sort__result.result
+      .result__block.tabs-content(data-tabs-content="result-tabs")
+        .result__panel.tabs-panel.is-active#sortPanel1
+          .result__product.product__list.flex
+            -var productImg = "assets/img/product.jpg"
+            mixin product(title)
+              .product__item.result__item
+                a.product__link(href="#")
+                  span.product__img--wrapper
+                    img(src=productImg, alt="")
+                  span.product__name #{title}
+                .product__body
+                  .product__info.flex.jcsb.aic
+                    span.state В наличии
+                    a.product__favorites(href="#")
+                    a.product__compare(href="#")
+                  .product__rating.flex.aic
+                    fieldset.field-rating
+                      input(type="radio" id="star5" name="rating" value="5")
+                      label(class = "full-rate" for="star5")
+                      input(type="radio" id="star4half" name="rating" value="4 and a half")
+                      label(class="half-rate" for="star4half")
+                      input(type="radio" id="star4" name="rating" value="4" checked)
+                      label(class = "full-rate" for="star4")
+                      input(type="radio" id="star3half" name="rating" value="3 and a half")
+                      label(class="half-rate" for="star3half")
+                      input(type="radio" id="star3" name="rating" value="3")
+                      label(class="full-rate" for="star3")
+                      input(type="radio" id="star2half" name="rating" value="2 and a half" )
+                      label(class="half-rate" for="star2half")
+                      input(type="radio" id="star2" name="rating" value="2")
+                      label(class = "full-rate" for="star2")
+                      input(type="radio" id="star1half" name="rating" value="1 and a half")
+                      label(class="half-rate" for="star1half")
+                      input(type="radio" id="star1" name="rating" value="1")
+                      label(class="full-rate" for="star1")
+                      input(type="radio" id="starhalf" name="rating" value="half")
+                      label(class="half-rate" for="starhalf")
+                    .rating__count (36)
+                  .product__form.flex.jcsb.aic
+                    .product__price
+                      .product__price--count 9 750
+                        |  руб.
+                    a.product__buy.mainButtons(href="#") Купить
+              
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки')
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки с гидрострелкой')
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки с гидрострелкой')
+        .result__panel.tabs-panel#sortPanel2
+          .result__product.product__list.result__product--view.flex
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки с гидрострелкой')
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки с гидрострелкой')
+
+        .result__paginate.paginate
+          ul.paginate__list.flex
+            li.paginate__item.first
+              a(href="#") &laquo;
+            li.paginate__item.active
+              a(href="#") 1
+            li.paginate__item
+              a(href="#") 2
+            li.paginate__item
+              a(href="#") 3
+            li.paginate__item
+              a(href="#") 4
+            li.paginate__item
+              a(href="#") 5
+            li.paginate__item
+              a(href="#") ...
+            li.paginate__item
+              a(href="#") 101
+            li.paginate__item
+              a(href="#") 102
+            li.paginate__item.last
+              a(href="#") &raquo;
+        
