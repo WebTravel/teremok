@@ -1,0 +1,143 @@
+.action__cart {
+  align-items: flex-start;
+  margin-bottom: rem-calc(55);
+  &--img {
+    max-width: 555px;
+    width: 100%;
+    margin-right: 25px;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+    }
+  }
+  &--text {
+    margin-bottom: rem-calc(20);
+    font-weight: 300;
+    font-size: 1rem;
+    h2 {
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin-bottom: rem-calc(20);
+      line-height: 1.25
+    }
+    p {
+      line-height: 1.5;
+      margin-bottom: rem-calc(20);
+      font-weight: 300;
+    }
+  }
+  &--link {
+    color: #7f8183;
+    font-family: $fontTwo, Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    font-style: italic;
+    padding: rem-calc(10) 0;
+    display: block;
+  }
+}
+
+.action {
+  &__wrapper {
+    width: 100%;
+    padding-bottom: rem-calc(30);
+    margin-bottom: rem-calc(30);
+    border-bottom: 1px solid $borderColor;
+  }
+  &__item {
+    margin-bottom: rem-calc(20);
+    a {
+      text-decoration: none;
+      box-sizing: border-box;
+      box-shadow: 0.188rem 0.188rem 0.563rem rgba(0, 0, 0, 0.1);
+      display: block;
+      @extend %opacity;
+    }
+    span {
+      display: block;
+      &:last-child {
+        display: inline-block;
+      }
+    }
+  }
+  &__img--wrapper{
+    max-height: 220px;
+    overflow: hidden;
+    margin-bottom: rem-calc(17);
+  }
+  &__img {
+    width: 100%;
+  }
+  &__name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #353a3e;
+    margin: 0 rem-calc(20) rem-calc(20) rem-calc(20);
+  }
+  &__desc {
+    @extend %italic;
+    margin: 0 rem-calc(20) rem-calc(20) rem-calc(20);
+  }
+}
+
+.slider__action--text {
+  left: 7%;
+  top: auto;
+  bottom: 50px;
+}
+
+.slider__date {
+  font-size: 1.125rem;
+  span {
+    display: inline;
+    font-weight: 700;
+  }
+}
+
+.slider__link span.slider__link--text {
+  color: #6a6a6a;
+  font-size: 1.125rem;
+  display: inline-block;
+  border-bottom: 2px dotted;
+  margin-top: rem-calc(20);
+}
+
+.slider__link {
+  @include breakpoint(large) {
+    &:hover {
+      opacity: 0.8;
+      span.slider__link--text {
+        border-bottom: 2px solid transparent;
+      }
+    }
+  }
+}
+
+
+//adaptive
+@include breakpoint(medium down) {
+  .action__cart {
+    display: block;
+    margin-bottom: rem-calc(35);
+    &--img {
+      margin-bottom: rem-calc(30);
+      text-align: center;
+      width: 100%;
+      margin-right: 0;
+      max-width: 100%;
+      img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+  }
+  .slider__action {
+    .slider__item {
+      height: 250px;
+      background-size: 130%;
+      background-position: 55% 0
+    }
+  }
+}

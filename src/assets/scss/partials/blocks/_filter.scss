@@ -14,6 +14,9 @@
   &__body {
     padding-top: rem-calc(15);
   }
+  &__switch {
+    display: none;
+  }
   &__item {
     margin-bottom: rem-calc(20);
   }
@@ -181,4 +184,20 @@
 
 .company__wrap {
   display: none;
+}
+
+//adaptive
+@include breakpoint(medium down) {
+  .filter {
+    display: none;
+    &__switch  {
+      width: 100%;
+      display: block;
+      height: 35px;
+      line-height: 35px;
+      font-size: 1.063rem;
+      font-weight: 700;
+      margin-bottom: 0.9375rem;
+    }
+  }
 }

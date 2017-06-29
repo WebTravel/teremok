@@ -1,0 +1,52 @@
+extends ../layout/base.pug
+block prepend head
+  - var title = 'Акции';
+block content
+  .content
+    .row.breadcrumbs__wrapper
+      .column
+        nav.breadcrumbs
+          a(href="/") Главная 
+          a(href="#") Каталог 
+          span Акции
+        h1 Акции
+  .slider.slider__action
+    mixin slide 
+      .slider__item.slider__one(style="background-image: url(assets/img/sale.jpg)")
+        a(href="#" class="slider__link")
+          .row
+            .slider__text.slider__action--text
+              span.slider__date с 
+                span 26.06.2015 
+                | и до 
+                span 31.08.2015 
+                | действует летняя акция 
+              span.slider__link--text Узнать подробности
+    +slide
+    +slide
+
+  .row.action__wrapper.flex
+    mixin action
+      .action__item.column.large-4.medium-6.small-12
+        a(href="#")
+          span.action__img--wrapper
+            img.action__img(src="assets/img/sale1.jpg", alt="")
+          span.action__name Соль «МОЗЫРЬСОЛЬ»
+          span.action__desc Узнать подробности
+    +action
+    +action
+    +action
+    
+  .row.content__text.column
+    h2 TermoStok.ru – ведущие бренды по привлекательным ценам ОПТОМ и в РОЗНИЦУ
+    p.
+      Покупка сантехнического оборудования — задача не из простых, учитывая высокие требования к качественным характеристикам и большой ассортимент этой группы товаров. Однако, независимо от того, затеян капитальный ремонт помещения, возводится ли дом «с нуля», или просто возникла необходимость замены какого-либо из уже имеющегося сантехнического оборудования, рядовому потребителю ни за что не разобраться самостоятельно в огромном ассортименте предлагаемой на сегодняшний день продукции.
+    p.
+      Покупка сантехнического оборудования — задача не из простых, учитывая высокие требования к качественным характеристикам и большой ассортимент этой группы товаров. Однако, независимо от того, затеян капитальный ремонт помещения, возводится ли дом «с нуля», или просто возникла необходимость замены какого-либо из уже имеющегося сантехнического оборудования, рядовому потребителю ни за что не разобраться самостоятельно в огромном ассортименте предлагаемой на сегодняшний день продукции.
+    p.
+      Здесь вы найдете то, что искали!
+  
+  .row
+    block follow
+      include ../partials/blocks/follow.pug
+      

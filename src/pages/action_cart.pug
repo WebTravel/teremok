@@ -1,0 +1,27 @@
+extends ../layout/base.pug
+block prepend head
+  - var title = 'Акции - Готовь радиатор летом';
+block content
+  .content
+    .row.breadcrumbs__wrapper
+      .column
+        nav.breadcrumbs
+          a(href="/") Главная 
+          a(href="#") Каталог 
+          span Готовь радиатор летом
+        h1 Готовь радиатор летом
+  block main
+    .row
+      .action__cart.column.flex.jcsb
+        .action__cart--img
+          img.action__cart--img(src="assets/img/action_cart.jpg", alt="")
+        .action__cart--text
+          h2 С 26.06.2015 и до 31.08.2015 действует  летняя акция а радиаторы отопления!
+          p.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+          p.
+            Радиаторы секционные - скидка 15 руб/ секция. Радиаторы стальные панельные - скидка от 3 % до 40 %. Комплектующие для радиаторов - скидка 15%.
+          a.action__cart--link(href="#") Смотреть товары по акции
+    
+      block follow
+        include ../partials/blocks/follow.pug

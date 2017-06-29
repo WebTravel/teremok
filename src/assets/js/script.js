@@ -211,6 +211,10 @@
 
     filterCompany();
 
+    $('.filter__switch').on('click', function() {
+      $(this).next('.filter').slideToggle(speed);
+    });
+
   });
 
 }());
