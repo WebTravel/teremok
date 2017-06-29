@@ -215,6 +215,11 @@
       $(this).next('.filter').slideToggle(speed);
     });
 
+    $('.info__category--item').on('click', function() {
+      $(this).closest('.info__category').find('.mainButtons').removeClass('mainButtons');
+      $(this).addClass('mainButtons');
+    });
+
   });
 
 }());

@@ -1,0 +1,86 @@
+extends ../layout/base.pug
+block prepend head
+  - var title = 'Полезная информация';
+block content
+  .content
+    .row.breadcrumbs__wrapper
+      .column
+        nav.breadcrumbs
+          a(href="/") Главная 
+          span Полезная информация
+        h1 Полезная информация
+  
+  .row
+    .column
+      .info__category.flex.jcsb
+        .info__category--item.mainButtons все тематики
+        .info__category--item котельное оборудование
+        .info__category--item водоснабжение
+        .info__category--item теплые полы
+        .info__category--item сантехника
+        .info__category--item водонагреватели
+        .info__category--item канализация
+      select.info__category--mobile.column
+        option все тематики
+        option котельное оборудование
+        option водоснабжение
+        option теплые полы
+        option сантехника
+        option водонагреватели
+        option канализация
+    - var image = 'assets/img/inform'
+    mixin inform(title, desc, bg)
+      .column.large-4.medium-6.small-12.information__item.information__item--view1
+        a(style=bg, href="#")
+          span.information__name #{title}
+          span.information__info #{desc}
+          span.information__item--link Читать далее
+    .information__list.flex.jcsc
+      +inform('Выбор проточного водонагревателя', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', "background-image: url(assets/img/inform1.jpg)")
+      +inform('Выбор проточного водонагревателя', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', "background-image: url(assets/img/inform2.jpg)")
+      .column.large-4.medium-6.small-12.information__item.information__item--view2
+        a(style="background-image: url(assets/img/inform3.jpg)", href="#")
+          span.information__name Выбор проточного  водонагревателя
+          span.information__item--link Читать далее
+      .column.large-12.medium-12.small-12.information__item.information__item--view3
+        a(style="background-image: url(assets/img/inform4.jpg)", href="#")
+          span.information__name Выбор проточного  водонагревателя
+          span.information__info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+          span.information__item--link Читать далее
+      +inform('Выбор проточного водонагревателя', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', "background-image: url(assets/img/inform1.jpg)")
+      +inform('Выбор проточного водонагревателя', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', "background-image: url(assets/img/inform2.jpg)")
+      .column.large-4.medium-6.small-12.information__item.information__item--view2
+        a(style="background-image: url(assets/img/inform3.jpg)", href="#")
+          span.information__name Выбор проточного  водонагревателя
+          span.information__item--link Читать далее
+      .column.large-12.medium-12.small-12.information__item.information__item--view3
+        a(style="background-image: url(assets/img/inform4.jpg)", href="#")
+          span.information__name Выбор проточного  водонагревателя
+          span.information__info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+          span.information__item--link Читать далее
+
+    .result__paginate.paginate.column
+      ul.paginate__list.flex
+        li.paginate__item.first
+          a(href="#") &laquo;
+        li.paginate__item.active
+          a(href="#") 1
+        li.paginate__item
+          a(href="#") 2
+        li.paginate__item
+          a(href="#") 3
+        li.paginate__item
+          a(href="#") 4
+        li.paginate__item
+          a(href="#") 5
+        li.paginate__item
+          a(href="#") ...
+        li.paginate__item
+          a(href="#") 101
+        li.paginate__item
+          a(href="#") 102
+        li.paginate__item.last
+          a(href="#") &raquo;
+    block follow
+      include ../partials/blocks/follow.pug
+      
