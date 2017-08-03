@@ -37,6 +37,18 @@ block footer
     .footer__bottom
       .row 
         .column &copy; ООО "Термосток" 2012-2017
+    
+    #callback__form
+      .callback-bgrd
+      .callback-form
+        form(action="#" name="callback__form" method="post")
+          .form-outer
+            .x &times;
+            .form__title Обратный звонок
+            .form__description Оставьте свой номер телефона и мы перезвоним Вам
+            input.form__input(type="text" name="callback-name" placeholder="Как вас зовут")
+            input#callback_phone(type="text" name="callback-phone" placeholder="+7 (___) ___-__-__" class="form__input")
+            input.form__submit.mainButtons(type="submit" value="Заказать звонок")
          
 
 

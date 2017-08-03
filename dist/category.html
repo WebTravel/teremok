@@ -33,7 +33,7 @@
             <input class="search__field" placeholder="Поиск товара" type="text">
             <input class="search__submit" type="submit" value="">
           </form>
-          <div class="column large-2 header__contacts"><a class="header__tel tel" href="tel:+74996382929">8 (499) 638-29-29</a><a class="header__callback callback" href="#"><span>Обратный звонок</span></a></div>
+          <div class="column large-2 header__contacts"><a class="header__tel tel" href="tel:+74996382929">8 (499) 638-29-29</a><a class="header__callback callback js-formShow" href="#callback__form"><span>Обратный звонок</span></a></div>
         </div>
       </div>
     </header>
@@ -664,6 +664,21 @@
       <div class="footer__bottom">
         <div class="row"> 
           <div class="column">&copy; ООО "Термосток" 2012-2017</div>
+        </div>
+      </div>
+      <div id="callback__form">
+        <div class="callback-bgrd"></div>
+        <div class="callback-form">
+          <form action="#" name="callback__form" method="post">
+            <div class="form-outer">
+              <div class="x">&times;</div>
+              <div class="form__title">Обратный звонок</div>
+              <div class="form__description">Оставьте свой номер телефона и мы перезвоним Вам</div>
+              <input class="form__input" type="text" name="callback-name" placeholder="Как вас зовут">
+              <input class="form__input" id="callback_phone" type="text" name="callback-phone" placeholder="+7 (___) ___-__-__">
+              <input class="form__submit mainButtons" type="submit" value="Заказать звонок">
+            </div>
+          </form>
         </div>
       </div>
     </footer>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <meta description="" content="">
+    <meta keywords="" content=""><link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/screen.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__top">
+        <div class="row flex jcsb aic"><a class="column small-7 header__logo logo" href="/"><img src="assets/img/logo.png"></a>
+          <div class="column large-2 header__location"><span>Ваш город: <a href="#">Москва</a></span></div>
+          <div class="column large-5 medium-8 small-4 flex jcsb aic header__info"><a class="header__favorites favorites" href="#">Избранное<span id="favorites__count">5</span></a><a class="header__compare" href="#">Сравнение</a>
+            <div class="header__cart">Корзина<a href="#"><span id="header__cart--count">5</span></a>
+              <div class="header__products">
+                <ul class="header__products--list">
+                  <li class="header__products--item"><a href="#"><span class="header__products--imgWrap"><img src="assets/img/cartImg.jpg" alt=""></span><span class="header__products--name">Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура</span></a></li>
+                </ul>
+                <div class="header__products--price flex jcsb"><span>Всего к оплате (руб.)</span><span class="header__products--priceCount">9750</span></div><a class="mainButtons" href="#">Перейти в корзину</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="row flex jcsb aic"><a class="column large-3 medium-3 header__logo logo" href="/"><img src="assets/img/logo.png"></a>
+          <div class="header__button"><span class="toggle js-toggle"><span><em></em><em></em><em></em></span></span></div>
+          <form class="column large-5 header__search search" action="">
+            <input class="search__field" placeholder="Поиск товара" type="text">
+            <input class="search__submit" type="submit" value="">
+          </form>
+          <div class="column large-2 header__contacts"><a class="header__tel tel" href="tel:+74996382929">8 (499) 638-29-29</a><a class="header__callback callback js-formShow" href="#callback__form"><span>Обратный звонок</span></a></div>
+        </div>
+      </div>
+    </header>
+    <div class="menu">
+      <div class="row">
+        <div class="multilevelOverlay js-overlay"></div>
+        <nav class="column menu__wrapper">
+          <ul class="flex jcsb menu">
+            <li><a href="#">Каталог товаров</a>
+              <ul>
+                <li><a href="#">Отопление</a></li>
+                <li><a href="#">Водоснабжение и подогрев</a>
+                  <ul>
+                    <li><a href="#">Обогреватели</a></li>
+                    <li><a href="#">Предохранительная арматура</a>
+                      <ul>
+                        <li><a href="#">Термоманометры</a></li>
+                        <li><a href="#">Термометры биметаллические</a></li>
+                        <li><a href="#">Манометры</a></li>
+                        <li><a href="#">Воздухоотводчики</a></li>
+                        <li><a href="#">Редукторы давления</a></li>
+                        <li><a href="#">Перепускные клапаны</a></li>
+                        <li><a href="#">Предохранительные клапаны</a></li>
+                        <li><a href="#">Группы безопасности</a></li>
+                        <li><a href="#">Деаэраторы</a></li>
+                        <li><a href="#">Грязеуловители (дешламаторы)</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Радиаторы отопления (батарея)</a></li>
+                    <li><a href="#">Расширительные баки</a></li>
+                    <li><a href="#">Котлы отопления</a></li>
+                    <li><a href="#">Полотенцесушителя</a></li>
+                    <li><a href="#">Котельное оборудование</a></li>
+                    <li><a href="#">Трубы и фитинги</a></li>
+                    <li><a href="#">Конвекторы</a></li>
+                    <li><a href="#">Регулирующая арматура</a></li>
+                    <li><a href="#">Теплотрассы</a></li>
+                    <li><a href="#">Теплоноситель для системы отопления</a></li>
+                    <li><a href="#">Запорная арматура</a>
+                      <ul>
+                        <li><a href="#">Термоманометры</a></li>
+                        <li><a href="#">Термометры биметаллические</a></li>
+                        <li><a href="#">Манометры</a></li>
+                        <li><a href="#">Воздухоотводчики</a></li>
+                        <li><a href="#">Редукторы давления</a></li>
+                        <li><a href="#">Перепускные клапаны</a></li>
+                        <li><a href="#">Предохранительные клапаны</a></li>
+                        <li><a href="#">Группы безопасности</a></li>
+                        <li><a href="#">Деаэраторы</a></li>
+                        <li><a href="#">Грязеуловители (дешламаторы)</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#">Канализация и дренаж</a></li>
+                <li><a href="#">Тепло- и шумоизоляция</a></li>
+                <li><a href="#">Инструмент и крепеж</a></li>
+                <li><a href="#">Электрика и свет</a></li>
+                <li><a href="#">Сантехника</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Бренды</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="content">
+      <main>
+        <div class="row breadcrumbs__wrapper">
+          <div class="column">
+            <nav class="breadcrumbs"><a href="/">Главная </a><span>Корзина</span></nav>
+            <h1>Ваша корзина</h1>
+          </div>
+          <div class="column cart">
+            <ul class="large-12 tabs" data-tabs id="tabs">
+              <li class="tabs-title tabs-cart1 is-active"><a href="#cart1">Состав заказа</a></li>
+              <li class="tabs-title tabs-cart2"><a href="#cart2">Оформление заказа</a></li>
+              <li class="tabs-title tabs-cart3"><a href="#cart3">Подтверждение заказа</a></li>
+            </ul>
+            <div class="large-12 tabs-content" data-tabs-content="tabs">
+              <div class="tabs-panel order is-active" id="cart1">
+                <div class="order__wrap flex jcsb">
+                  <div class="order__list result__product product__list result__product--view flex">
+                                        <div class="product__item result__item cardWrap"><a class="product__link" href="#"><span class="product__img--wrapper"><img src="assets/img/product.jpg" alt=""></span><span class="product__name">Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура<span class="state">В наличии</span></span></a>
+                                          <div class="product__price">
+                                            <div class="product__price--count"><span class="priceCount">9750</span> руб.</div>
+                                          </div>
+                                          <div class="quantity card__info--count">
+                                            <input type="number" min="1" max="100000" value="1" step="1">
+                                          </div>
+                                          <div class="product__del"></div>
+                                        </div>
+                                        <div class="product__item result__item cardWrap"><a class="product__link" href="#"><span class="product__img--wrapper"><img src="assets/img/product.jpg" alt=""></span><span class="product__name">Коллектор котельной разводки<span class="state">В наличии</span></span></a>
+                                          <div class="product__price">
+                                            <div class="product__price--count"><span class="priceCount">9750</span> руб.</div>
+                                          </div>
+                                          <div class="quantity card__info--count">
+                                            <input type="number" min="1" max="100000" value="1" step="1">
+                                          </div>
+                                          <div class="product__del"></div>
+                                        </div>
+                    <div class="order__link flex"><a class="link-back" href="#">Вернуться к покупкам</a><a class="link-add" href="#">Быстрое добавление товаров в корзину</a></div>
+                  </div>
+                  <div class="order__discount">
+                    <div class="order__finishprice flex"> <span>Всего (руб.)</span><span id="finishPrice"></span></div>
+                    <div class="order__promo promo">
+                      <div class="promo__title">У Вас есть промокод?</div>
+                      <form class="promo__form">
+                        <input type="text" placeholder="Введите промокод">
+                        <input type="submit" value="Активировать">
+                      </form>
+                    </div><a class="order__next mainButtons" href="#cart2">Оформить заказ       </a>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-panel" id="cart2">
+                <div class="tabs__list tab personal">
+                  <div class="tab__item active"><span class="active">Физическое лицо</span>
+                    <div class="tab__content">
+                      <div class="personal__inner">
+                        <h3>Контактные данные</h3>
+                        <div class="personal__input flex">
+                          <input class="personal__lastname" id="lastname" type="text" placeholder="Фамилия*">
+                          <input class="personal__firstname" id="firstname" type="text" placeholder="Имя*">
+                          <input class="personal__fatherland" id="fatherland" type="text" placeholder="Отчество*">
+                          <input class="personal__phone" id="personalPhone" type="text" placeholder="Телефон*">
+                          <input class="personal__phone" id="personalPhone2" type="text" placeholder="Дополнительный телефон*">
+                          <input class="personal__email" id="personalEmail" type="text" placeholder="E-mail*">
+                        </div>
+                        <h3>Адрес доставки</h3>
+                        <div class="personal__input flex">
+                          <select class="personal__select">
+                            <option>Москва</option>
+                            <option>Подмосковье</option>
+                            <option>Санкт-Петербург</option>
+                          </select>
+                          <input class="personal__street" id="street" type="text" placeholder="Улица*">
+                          <input class="personal__house" id="house" type="text" placeholder="Дом*">
+                          <input class="personal__corps" id="corps" type="text" placeholder="Корпус*">
+                          <input class="personal__build" id="build" type="text" placeholder="Строение*">
+                          <input class="personal__apartment" id="apartment" type="text" placeholder="Квартира*">
+                          <input class="personal__time" id="time" type="text" placeholder="Временной интревал*"><span class="personal__important">Обратите внимание, что доставка заказа осуществляется строго до подъезда.<br>Разгрузка и подъем на нужный этаж доставленного товара осуществляется покупателем.</span>
+                          <textarea class="personal__message" id="message" placeholder="Примечание"></textarea>
+                        </div>
+                        <div class="shippingPrice flex aic jcsb"><span>Доставка (руб.):</span><span>500</span></div>
+                      </div>
+                      <div class="pay">
+                        <div class="personal__inner">
+                          <h3>Способ оплаты</h3>
+                          <div class="pay__list flex jcsb">
+                                                        <div class="pay__item">
+                                                          <div class="pay__name">
+                                                            <input type="radio" name="pay" id="pay1" checked>
+                                                            <label for="pay1">Оплата наличными в пункте самовывоза</label>
+                                                          </div>
+                                                          <div class="pay__desc">Данный способ оплаты предусматривает оплату товара  при получении в пункте самовывоза и позволяет сэкономить на доставке. Также данный способ оплаты обязателен  при сумме заказа более 200 000 руб. в качестве 100% предоплаты.</div>
+                                                        </div>
+                                                        <div class="pay__item">
+                                                          <div class="pay__name">
+                                                            <input type="radio" name="pay" id="pay2">
+                                                            <label for="pay2">Оплата картой в пункте самовывоза</label>
+                                                          </div>
+                                                          <div class="pay__desc">Данный способ оплаты предусматривает оплату товара  при получении в пункте самовывоза и позволяет сэкономить на доставке. Также данный способ оплаты обязателен  при сумме заказа более 200 000 руб. в качестве 100% предоплаты.</div>
+                                                        </div>
+                                                        <div class="pay__item">
+                                                          <div class="pay__name">
+                                                            <input type="radio" name="pay" id="pay3">
+                                                            <label for="pay3">Оплата наличными курьеру при получении</label>
+                                                          </div>
+                                                          <div class="pay__desc">Данный способ оплаты предусматривает оплату товара  при получении в пункте самовывоза и позволяет сэкономить на доставке. Также данный способ оплаты обязателен  при сумме заказа более 200 000 руб. в качестве 100% предоплаты.</div>
+                                                        </div>
+                                                        <div class="pay__item">
+                                                          <div class="pay__name">
+                                                            <input type="radio" name="pay" id="pay4">
+                                                            <label for="pay4">Банковской картой курьеру при получении</label>
+                                                          </div>
+                                                          <div class="pay__desc">Данный способ оплаты предусматривает оплату товара  при получении в пункте самовывоза и позволяет сэкономить на доставке. Также данный способ оплаты обязателен  при сумме заказа более 200 000 руб. в качестве 100% предоплаты.</div>
+                                                        </div>
+                                                        <div class="pay__item">
+                                                          <div class="pay__name">
+                                                            <input type="radio" name="pay" id="pay5">
+                                                            <label for="pay5">Оплата наличными курьеру при получении</label>
+                                                          </div>
+                                                          <div class="pay__desc">Данный способ оплаты предусматривает оплату товара  при получении в пункте самовывоза и позволяет сэкономить на доставке. Также данный способ оплаты обязателен  при сумме заказа более 200 000 руб. в качестве 100% предоплаты.</div>
+                                                        </div>
+                                                        <div class="pay__item">
+                                                          <div class="pay__name">
+                                                            <input type="radio" name="pay" id="pay6">
+                                                            <label for="pay6">Банковской картой курьеру при получении</label>
+                                                          </div>
+                                                          <div class="pay__desc">Данный способ оплаты предусматривает оплату товара  при получении в пункте самовывоза и позволяет сэкономить на доставке. Также данный способ оплаты обязателен  при сумме заказа более 200 000 руб. в качестве 100% предоплаты.</div>
+                                                        </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab__item"><span>Юридическое лицо</span>
+                    <div class="tab__content">
+                      <div class="personal__inner">
+                        <h3>Контактные данные</h3>
+                        <div class="personal__input flex">
+                          <input class="personal__lastname" id="lastname" type="text" placeholder="Фамилия*">
+                          <input class="personal__firstname" id="firstname" type="text" placeholder="Имя*">
+                          <input class="personal__fatherland" id="fatherland" type="text" placeholder="Отчество*">
+                          <input class="personal__phone" id="personalPhone" type="text" placeholder="Телефон*">
+                          <input class="personal__phone" id="personalPhone2" type="text" placeholder="Дополнительный телефон*">
+                          <input class="personal__email" id="personalEmail" type="text" placeholder="E-mail*">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="nextBlock flex jcsb aic"><a class="link-back" href="#">Вернуться</a><a class="order__next level mainButtons" href="#cart3">Продолжить </a></div>
+              </div>
+              <div class="tabs-panel finishResult" id="cart3">
+                <div class="finish__wrapper flex jcsb">
+                  <div class="finish">
+                    <div class="finishList">
+                                            <div class="finish__item flex jcsb">
+                                              <div class="finish__name">Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура</div>
+                                              <div class="finish__count"> <span id="finishCount">1</span> шт.</div>
+                                              <div class="finish__price"><span id="finishPrice">9 750</span> руб.</div>
+                                            </div>
+                                            <div class="finish__item flex jcsb">
+                                              <div class="finish__name">Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура</div>
+                                              <div class="finish__count"> <span id="finishCount">1</span> шт.</div>
+                                              <div class="finish__price"><span id="finishPrice">9 750</span> руб.</div>
+                                            </div>
+                    </div>
+                    <div class="finish__address order__address">
+                      <div class="order__address--item">
+                        <div class="order__address--name">Адрес получения заказа</div>
+                        <div class="order__address--desc">Москва, ул. Улица, д. 1, корп. 1, кв. 1</div>
+                      </div>
+                      <div class="order__address--item">
+                        <div class="order__address--name">Способ оплаты</div>
+                        <div class="order__address--desc">Оплата наличными в пункте самовывоза</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="results__block">
+                    <div class="results__list">
+                      <div class="results__item flex jcsb"><span>Товары (руб.)</span><span>21 200</span></div>
+                      <div class="results__item flex jcsb"><span>Доставка (руб.)</span><span>500</span></div>
+                      <div class="results__item flex jcsb finResult"><span>Итого (руб.)</span><span>21 700</span></div>
+                    </div>
+                    <div class="results__block--finish">
+                      <div class="results__block--input">
+                        <input id="result" type="checkbox">
+                        <label for="result">Я не робот</label>
+                      </div><a class="mainButtons js-formShow" href="#finishOrder">Оформить заказ </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="row flex jcsb">
+        <div class="column footer__info"><a class="footer__logo" href="#"><img src="assets/img/footer-logo.png" alt=""></a><a class="footer__phone" href="tel:+74996382929">8 (499) 638-29-29</a><a class="footer__callback callback" href="#">Обратный звонок</a><a class="footer__email" href="mailto: info@termostok.ru">info@termostok.ru</a>
+          <div class="footer__address">Москва, 1-ый км Калужского  шоссе, ТР "Славянский Град"</div>
+        </div>
+        <div class="column footer__menu">
+          <div class="footer__menu--title">О компании</div>
+          <nav class="footer__menu--list"><a href="#">О компании</a><a href="#">Новости</a><a href="#">Бренды</a><a href="#">Контакты</a></nav>
+        </div>
+        <div class="column footer__menu footer__menu--two">
+          <div class="footer__menu--title">Информация</div>
+          <nav class="footer__menu--list"><a href="#">Доставка и оплата</a><a href="#">Гарантия на товары</a><a href="#">Сервисные центры</a><a href="#">Договор оферты</a><a href="#">Сертификаты</a></nav>
+        </div>
+        <div class="column footer__menu--three">
+          <div class="footer__menu">
+            <div class="footer__menu--title">Мы принимаем</div>
+            <nav class="footer__menu--list flex jcsb aic"><a class="visa" href="#"></a><a class="mastercard" href="#"></a><a class="yaMoney" href="#"></a><a class="rambler" href="#"></a><a class="qiwi" href="#"></a></nav>
+          </div><a class="market" href="#"><img src="assets/img/market.jpg"></a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="row"> 
+          <div class="column">&copy; ООО "Термосток" 2012-2017</div>
+        </div>
+      </div>
+      <div id="callback__form">
+        <div class="callback-bgrd"></div>
+        <div class="callback-form">
+          <form action="#" name="callback__form" method="post">
+            <div class="form-outer">
+              <div class="x">&times;</div>
+              <div class="form__title">Обратный звонок</div>
+              <div class="form__description">Оставьте свой номер телефона и мы перезвоним Вам</div>
+              <input class="form__input" type="text" name="callback-name" placeholder="Как вас зовут">
+              <input class="form__input" id="callback_phone" type="text" name="callback-phone" placeholder="+7 (___) ___-__-__">
+              <input class="form__submit mainButtons" type="submit" value="Заказать звонок">
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/foundation.min.js"></script>
+    <script src="assets/js/libs.js"></script>
+    <script src="assets/js/mobileMenu.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

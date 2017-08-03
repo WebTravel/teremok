@@ -6,8 +6,7 @@
     'next' : '<span class="arrow">&rsaquo;</span>',
     'prev' : '<span class="back-arrow">&lsaquo;</span>',
     'linkSwitch' : false,
-    'showParent': true,
-    'backButtonText': 'Назад'
+    'showParent': true
   };
 
   function MultiMenu (element, options) {
@@ -22,17 +21,42 @@
 
         var self = this,
           element = this.element,
-          attrId = element.attr('id'),
-          attrClass = element.attr('class'),
-          menuClass = 'close-list active-menu hidden-menu',
+          elementAttrId = element.attr('id'),
+          elementAttrClass = element.attr('class'),
+          arrClassList = [],
+          attrIdList = [],
+          arrClassItem = [],
+          arrClassLink = [],
+          childrenList = element.find('ul'),
+          childrenItem = element.find('li'),
+          childrenLink = element.find('a'),
           menuEnabled = false;
+
+        //Parse Attr menuElements
+        function addAttrInArr(el, attribute, arr) {
+          el.each(function(indx) {
+            if($(this).attr(attribute) != undefined) {
+              arr.push($(this).attr(attribute));
+            } else {
+              arr.push('');
+            }
+          });
+        }
+
+        //OutParse Attr menuElements
+        function outAttrArr(el, attr, arr) {
+          el.each(function(indx) {
+            var attrValue = arr[indx];
+            $(this).attr(attr, attrValue)
+          });
+        }
 
         //create animate-menu function
         function openMenu() {
           $('body').toggleClass('bodyFixed');
           setTimeout(function() {
             $('.multilevelMenu ul').attr('class', '');
-          }, 400);
+          }, 200);
         }
 
         //swipe function for open menu
@@ -52,37 +76,45 @@
               if (touchendX > touchstartX) {
                 //call animate-menu function
                 openMenu();
+                element.find('ul').attr('style', '');
               }
             });
 
             //close menu left-swipe
             $('.multilevelMenu').on('touchend', function (e) {
               touchendX = e.originalEvent.changedTouches[0].pageX;
-              if (touchendX < (touchstartX - 20)) {
+              if (touchendX < (touchstartX - 30)) {
                 $('body').removeClass('bodyFixed');
                 setTimeout(function () {
                   $('.multilevelMenu ul').attr('class', '');
-                }, 400);
+                }, 200);
               }
             });
           } else {
             return false;
           }
-
         }
 
+        addAttrInArr(childrenList, 'class', arrClassList);
+        addAttrInArr(childrenList, 'id', attrIdList);
+        addAttrInArr(childrenItem, 'class', arrClassItem);
+        addAttrInArr(childrenLink, 'class', arrClassLink);
+
+        //add Overlay
+        //$('body').append('<div class="multilevelOverlay js-overlay"></div>');
 
         //create work-menu function
         function mobileMenu() {
-
           var w = window.innerWidth ? window.innerWidth : $(window).width();
 
           //next level function
           function nextLevelFunction (e, el) {
             e.preventDefault();
             e.stopPropagation();
-            el.parents('ul').addClass('close-list');
-            el.closest('li').children('ul').addClass('active-menu');
+            var elem = el.closest('li').children('ul'),
+                elemHeight = elem.innerHeight() + 15;
+            el.parents('ul').addClass('close-list').height(elemHeight);
+            elem.addClass('active-menu').height(elemHeight);
           }
 
           //add text for prev button function
@@ -90,8 +122,7 @@
             if (str.length > 0) {
               str = str.substring(0, str.length - 1);
             }
-            el.closest('li').find('li.back').text(str);
-            $('.js-back').append(self.options.prev);
+            el.closest('li').find('li.back').text(str).append(self.options.prev);
           }
 
           if (w < self.options.width) {
@@ -100,8 +131,12 @@
                   menuEnabled = true;
                   element.removeAttr('id');
                   element.removeClass();
-                  element.find('> ul').removeClass();
                   element.addClass('multilevelMenu');
+                  childrenList.removeClass();
+                  childrenList.removeAttr('id');
+                  childrenItem.removeClass();
+                  childrenLink.removeClass();
+
                   //call swipe function
                   SwipeOpenMenu();
                   //add switch-button for children ul
@@ -114,11 +149,10 @@
                     return $(out).addClass('js-arrow');
                   });
                   //add back-button function
-                  element.find('li').find('ul').prepend('<li class="back js-back"></li>');
+                  element.find('li').find('ul').prepend('<li class="back js-back">Назад</li>');
 
                   //view next level menu full button
                   if (self.options.linkSwitch == true) {
-
                     $(link).on("click", function (e) {
                       if ($(this).next('ul').length > 0) {
                         nextLevelFunction (e, $(this));
@@ -129,7 +163,6 @@
                     });
 
                   } else {
-
                     //view next level menu on only arrow
                     $(link).on("click", ".js-arrow", function (e) {
                       nextLevelFunction (e, $(this));
@@ -137,17 +170,22 @@
                       var str = $(this).parents('a').text();
                       textPrevButton (str, $(this));
                     });
-
                   }
 
                   //view prev level menu to click "back"
                   $('.js-back').click(function () {
-                    $(this).closest('ul.close-list').removeClass('close-list');
-                    $(this).closest('ul').addClass('hidden-menu');
+                    var parent = $(this).closest('ul.close-list'),
+                        parentHeight = 0;
+                    parent.children('li').each(function(idx) {
+                        parentHeight += $(this).innerHeight();
+                    });
+                    parent.removeClass('close-list');
+                    $(this).parents('ul').innerHeight(parentHeight);
+                    $(this).closest('ul').addClass('hidden-menu').attr('style', '');
                     var that = this;
                     setTimeout(function () {
                       $(that).closest('ul').removeClass('active-menu hidden-menu');
-                    }, 400);
+                    }, 200);
                   });
 
               }
@@ -155,14 +193,17 @@
              if (menuEnabled) {
                 //return attr
                 menuEnabled = false;
-                element.attr('id', attrId);
-                element.attr('class', attrClass);
+                element.attr('id', elementAttrId);
+                element.attr('class', elementAttrClass);
+                element.find('ul').attr('style', '');
+                outAttrArr(childrenList, 'class', arrClassList);  
+                outAttrArr(childrenList, 'id', attrIdList);   
+                outAttrArr(childrenItem, 'class', arrClassItem);
+                outAttrArr(childrenLink, 'class', arrClassLink);           
                 $('.js-arrow, .js-back, .js-swipe').detach();
               }
 
               $('body').removeClass('bodyFixed'); //remove fixedClass to body
-              element.find('ul').removeClass(menuClass);
-              element.find('> ul').addClass('menu flex jcsb');
             }
         }
 
@@ -179,9 +220,8 @@
         $('.js-toggle').add($('.js-overlay')).on("click", function () {
             //call animate-menu function
             openMenu();
-            $('.js-swipe').toggleClass('none')
+            element.find('ul').attr('style', '');
         });
-
   };
 
   $.fn.mobileMenu = function (options) {

@@ -1,0 +1,200 @@
+extends ../layout/base.pug
+block prepend head
+  - var title = 'Карточка товара';
+block main
+  .row.breadcrumbs__wrapper
+    .column
+      nav.breadcrumbs
+        a(href="/") Главная 
+        a(href="/") Каталог 
+        a(href="/") Отопление 
+        a(href="/") Обогреватели 
+        span Конвектор AEG WKL503 S электрический обогреватель
+      h1 Конвектор AEG WKL503 S электрический обогреватель
+      .card.flex.jcsb
+        .card__img
+          .card__article.flex.jcsb 
+            span Артикул: 
+              span#articleCount 123456
+            span.new
+          .card__slider
+            .slider-nav
+              mixin slider-nav
+                .slider-nav__item
+                  img(src="assets/img/cart.jpg", alt="")
+              +slider-nav
+              +slider-nav
+              +slider-nav
+              +slider-nav
+              +slider-nav
+            .slider-for
+              mixin slider-for
+                .slider-for__item
+                  a(href="assets/img/cart.jpg"  data-fancybox="gallery")
+                    img(src="assets/img/cart.jpg", alt="")
+                    span.slider__zoom Увеличить
+              +slider-for
+              +slider-for
+              +slider-for
+              +slider-for
+              +slider-for
+        .card__info.cardWrap
+          .card__info--price.flex.jcsb
+            span.name Цена (руб.):
+            .price
+              .old-price 8 100
+              .new-price.priceCount 6 600
+          .card__info--count.flex.jcsb
+            span.name Количество:
+            .quantity
+              input(type="number" min="1" max="100000" value="1" step="1")
+          .product__info.card__info--compare.flex.jcsb.aic
+            span.state В наличии
+            a.product__favorites(href="#")
+            a.product__compare(href="#")
+          .card__info--add.mainButtons Добавить в корзину
+          .card__info--desc.desc
+            .desc__title.shipping__title Доставка
+            .desc__body
+              span Самовывоз из магазина: Москва
+              span Водитель БЕСПЛАТНО по Москве от 10000 руб.
+              span Доставка в регионы: до ТК
+          .card__info--desc.desc
+            .desc__title.garanty__title Гарантия
+            .desc__body
+              span Возврат/обмен в течение 14 дней
+              span Гарантия от производителя
+          .card__info--rate.flex
+            .product__rating.flex.aic
+              fieldset.field-rating
+                input(type="radio" id="starProd5" name="rating" value="5")
+                label(class = "full-rate" for="starProd5")
+                input(type="radio" id="starProd4half" name="rating" value="4 and a half")
+                label(class="half-rate" for="starProd4half")
+                input(type="radio" id="starProd4" name="rating" value="4" checked)
+                label(class = "full-rate" for="starProd4")
+                input(type="radio" id="starProd3half" name="rating" value="3 and a half")
+                label(class="half-rate" for="starProd3half")
+                input(type="radio" id="star3" name="rating" value="3")
+                label(class="full-rate" for="starProd3")
+                input(type="radio" id="starProd2half" name="rating" value="2 and a half" )
+                label(class="half-rate" for="starProd2half")
+                input(type="radio" id="starProd2" name="rating" value="2")
+                label(class = "full-rate" for="star2")
+                input(type="radio" id="starProd1half" name="rating" value="1 and a half")
+                label(class="half-rate" for="starProd1half")
+                input(type="radio" id="starProd1" name="rating" value="1")
+                label(class="full-rate" for="starProd1")
+                input(type="radio" id="starProdhalf" name="rating" value="half")
+                label(class="half-rate" for="starProdhalf")
+              .rating__count (36)
+            a.card__info--review(href="#") Оценить товар
+
+
+
+  .cardDesc
+    .row
+      .tabs__list.column.tab
+        .tab__item.active
+          span.active Описание
+          .tab__content
+            .tab__content--inner.column
+              .tab__content--partWrap
+                .tab__content--part
+                  .tab__content--item 
+                    span Тип обогревателя
+                    span Электрический
+                  .tab__content--item 
+                    span Цвет
+                    span Белый
+                  .tab__content--item 
+                    span Бренд
+                    span AEG
+                  .tab__content--item 
+                    span Наименование
+                    span Электрический обогреватель (конвектор) AEG WKL503 S
+                  .tab__content--item 
+                    span Тип установки
+                    span Напольный
+                  .tab__content--item 
+                    span Вид
+                    span Электрический
+                .tab__content--part
+                  .tab__content--item 
+                    span Тип обогревателя
+                    span Электрический
+                  .tab__content--item 
+                    span Цвет
+                    span Белый
+                  .tab__content--item 
+                    span Бренд
+                    span AEG
+                  .tab__content--item 
+                    span Наименование
+                    span Электрический обогреватель (конвектор) AEG WKL503 S
+        .tab__item
+          span Техническая информация
+          .tab__content
+            .tab__content--inner.column
+              p.
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ducimus quasi cum quas officiis explicabo error amet, quibusdam sapiente dignissimos rem, praesentium eveniet quia quo dolor minus ullam. Non, excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ducimus quasi cum quas officiis explicabo error amet, quibusdam sapiente dignissimos rem, praesentium eveniet quia quo dolor minus ullam. Non, excepturi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ducimus quasi cum quas officiis explicabo error amet, quibusdam sapiente dignissimos rem, praesentium eveniet quia quo dolor minus ullam. Non, excepturi.
+        .tab__item
+          span Оплата и доставка
+          .tab__content
+            .tab__content--inner.column 
+              p.
+                Самовывоз из магазина: Москва. Водитель БЕСПЛАТНО по Москве от 10000 руб. Доставка в регионы: до ТК
+
+    .product.productPage
+      .row
+        .column.similar__wrapper
+          h2 Похожие товары
+          .similar.flex#product__panel1
+            -var productImg = "assets/img/product.jpg"
+            mixin product(title)
+              .product__item
+                a.product__link(href="#")
+                  span.product__img--wrapper
+                    img(src=productImg, alt="")
+                  span.product__name #{title}
+                .product__body
+                  .product__info.flex.jcsb.aic
+                    span.state В наличии
+                    a.product__favorites(href="#")
+                    a.product__compare(href="#")
+                  .product__rating.flex.aic
+                    fieldset.field-rating
+                      input(type="radio" id="star5" name="rating" value="5")
+                      label(class = "full-rate" for="star5")
+                      input(type="radio" id="star4half" name="rating" value="4 and a half")
+                      label(class="half-rate" for="star4half")
+                      input(type="radio" id="star4" name="rating" value="4" checked)
+                      label(class = "full-rate" for="star4")
+                      input(type="radio" id="star3half" name="rating" value="3 and a half")
+                      label(class="half-rate" for="star3half")
+                      input(type="radio" id="star3" name="rating" value="3")
+                      label(class="full-rate" for="star3")
+                      input(type="radio" id="star2half" name="rating" value="2 and a half" )
+                      label(class="half-rate" for="star2half")
+                      input(type="radio" id="star2" name="rating" value="2")
+                      label(class = "full-rate" for="star2")
+                      input(type="radio" id="star1half" name="rating" value="1 and a half")
+                      label(class="half-rate" for="star1half")
+                      input(type="radio" id="star1" name="rating" value="1")
+                      label(class="full-rate" for="star1")
+                      input(type="radio" id="starhalf" name="rating" value="half")
+                      label(class="half-rate" for="starhalf")
+                    .rating__count (36)
+                  .product__form.flex.jcsb.aic
+                    .product__price
+                      .product__price--count 9 750
+                        |  руб.
+                    a.product__buy.mainButtons(href="#") Купить
+            
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки')
+            +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+            +product('Коллектор котельной разводки с гидрострелкой')
+            +product('Коллектор котельной разводки с гидрострелкой')
+        block follow
+          include ../partials/blocks/follow.pug

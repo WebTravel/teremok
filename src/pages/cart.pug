@@ -1,0 +1,173 @@
+extends ../layout/base.pug
+block prepend head
+  - var title = 'Корзина';
+block main
+  .row.breadcrumbs__wrapper
+    .column
+      nav.breadcrumbs
+        a(href="/") Главная 
+        span Корзина
+      h1 Ваша корзина
+    .column.cart
+      ul.large-12.tabs(data-tabs id="tabs")
+        li.tabs-title.tabs-cart1.is-active
+          a(href="#cart1") Состав заказа
+        li.tabs-title.tabs-cart2
+          a(href="#cart2") Оформление заказа
+        li.tabs-title.tabs-cart3
+          a(href="#cart3") Подтверждение заказа
+      .large-12.tabs-content(data-tabs-content="tabs")
+        .tabs-panel.order.is-active#cart1
+          .order__wrap.flex.jcsb
+            .order__list.result__product.product__list.result__product--view.flex
+              -var productImg = "assets/img/product.jpg"
+              mixin product(title)
+                .product__item.result__item.cardWrap
+                  a.product__link(href="#")
+                    span.product__img--wrapper
+                      img(src=productImg, alt="")
+                    span.product__name #{title}
+                      span.state В наличии
+                  .product__price
+                    .product__price--count
+                      span.priceCount 9750
+                      |  руб.
+                  .quantity.card__info--count
+                    input(type="number" min="1" max="100000" value="1" step="1")
+                  .product__del
+              +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+              +product('Коллектор котельной разводки')
+
+              .order__link.flex
+                a.link-back(href="#") Вернуться к покупкам
+                a.link-add(href="#") Быстрое добавление товаров в корзину
+
+            .order__discount
+              .order__finishprice.flex 
+                span Всего (руб.)
+                span#finishPrice
+              .order__promo.promo
+                .promo__title У Вас есть промокод?
+                form.promo__form
+                  input(type="text", placeholder="Введите промокод")
+                  input(type="submit", value="Активировать")
+              a.order__next.mainButtons(href="#cart2") Оформить заказ       
+            
+        .tabs-panel#cart2
+          .tabs__list.tab.personal
+            .tab__item.active
+              span.active Физическое лицо
+              .tab__content
+                .personal__inner
+                  h3 Контактные данные
+                  .personal__input.flex
+                    input.personal__lastname#lastname(type="text" placeholder="Фамилия*")
+                    input.personal__firstname#firstname(type="text" placeholder="Имя*")
+                    input.personal__fatherland#fatherland(type="text" placeholder="Отчество*")
+                    input.personal__phone#personalPhone(type="text" placeholder="Телефон*")
+                    input.personal__phone#personalPhone2(type="text" placeholder="Дополнительный телефон*")
+                    input.personal__email#personalEmail(type="text" placeholder="E-mail*")
+                  
+                  h3 Адрес доставки
+                  .personal__input.flex
+                    select.personal__select
+                      option Москва
+                      option Подмосковье
+                      option Санкт-Петербург
+                    input.personal__street#street(type="text" placeholder="Улица*")
+                    input.personal__house#house(type="text" placeholder="Дом*")
+                    input.personal__corps#corps(type="text" placeholder="Корпус*")
+                    input.personal__build#build(type="text" placeholder="Строение*")
+                    input.personal__apartment#apartment(type="text" placeholder="Квартира*")
+                    input.personal__time#time(type="text" placeholder="Временной интревал*")
+                    span.personal__important Обратите внимание, что доставка заказа осуществляется строго до подъезда.
+                      br 
+                      | Разгрузка и подъем на нужный этаж доставленного товара осуществляется покупателем.
+                    textarea.personal__message#message(placeholder="Примечание")
+                  .shippingPrice.flex.aic.jcsb
+                    span Доставка (руб.):
+                    span 500
+
+                .pay
+                  .personal__inner
+                    h3 Способ оплаты
+                    .pay__list.flex.jcsb
+                      - var idPrefix = 'pay'
+                      mixin pay(id, name, attr)
+                        .pay__item
+                          .pay__name
+                            input(type="radio" name="pay" id=idPrefix+id checked=attr)
+                            label(for=idPrefix+id) #{name}
+                          .pay__desc Данный способ оплаты предусматривает оплату товара  при получении в пункте самовывоза и позволяет сэкономить на доставке. Также данный способ оплаты обязателен  при сумме заказа более 200 000 руб. в качестве 100% предоплаты.
+                      
+                      +pay(1, 'Оплата наличными в пункте самовывоза', true)
+                      +pay(2, 'Оплата картой в пункте самовывоза', false)
+                      +pay(3, 'Оплата наличными курьеру при получении', false)
+                      +pay(4, 'Банковской картой курьеру при получении', false)
+                      +pay(5, 'Оплата наличными курьеру при получении', false)
+                      +pay(6, 'Банковской картой курьеру при получении', false)
+
+
+
+            .tab__item
+              span Юридическое лицо
+              .tab__content
+                .personal__inner
+                  h3 Контактные данные
+                  .personal__input.flex
+                    input.personal__lastname#lastname(type="text" placeholder="Фамилия*")
+                    input.personal__firstname#firstname(type="text" placeholder="Имя*")
+                    input.personal__fatherland#fatherland(type="text" placeholder="Отчество*")
+                    input.personal__phone#personalPhone(type="text" placeholder="Телефон*")
+                    input.personal__phone#personalPhone2(type="text" placeholder="Дополнительный телефон*")
+                    input.personal__email#personalEmail(type="text" placeholder="E-mail*")
+
+          .nextBlock.flex.jcsb.aic
+            a.link-back(href="#") Вернуться
+            a.order__next.level.mainButtons(href="#cart3") Продолжить 
+
+
+        .tabs-panel#cart3.finishResult
+          .finish__wrapper.flex.jcsb
+            .finish
+              .finishList
+                mixin finish
+                  .finish__item.flex.jcsb
+                    .finish__name Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура
+                    .finish__count 
+                      span#finishCount 1
+                      |  шт.
+                    .finish__price
+                      span#finishPrice 9 750
+                      |  руб.
+                
+                +finish
+                +finish
+
+              .finish__address.order__address
+                .order__address--item
+                  .order__address--name Адрес получения заказа
+                  .order__address--desc Москва, ул. Улица, д. 1, корп. 1, кв. 1
+                .order__address--item
+                  .order__address--name Способ оплаты
+                  .order__address--desc Оплата наличными в пункте самовывоза
+            
+            .results__block
+              .results__list
+                .results__item.flex.jcsb
+                  span Товары (руб.)
+                  span 21 200
+                .results__item.flex.jcsb
+                  span Доставка (руб.)
+                  span 500
+
+                .results__item.flex.jcsb.finResult
+                  span Итого (руб.)
+                  span 21 700
+              
+              .results__block--finish
+                .results__block--input
+                  input#result(type="checkbox")
+                  label(for="result") Я не робот
+
+                a.mainButtons.js-formShow(href="#finishOrder") Оформить заказ 

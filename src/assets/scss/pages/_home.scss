@@ -49,6 +49,9 @@
 
 .brandSlider {
   margin-bottom: rem-calc(60);
+  > .row {
+    padding: rem-calc(32) 0;
+  }
   &__list {
     position: relative;
     top: -12px;

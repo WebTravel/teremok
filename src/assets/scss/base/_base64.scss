@@ -6,7 +6,7 @@
   }
 }
 
-.product__buy:before, .header__cart:before {
+.product__buy:before, .header__cart:before, .card__info--add:before {
   background-image: svg-load('cart.svg');
 }
 
@@ -54,6 +54,14 @@
 
 select {
   background-image: inline('select.png');
+  &.personal__select {
+    background-image: svg-load('personalSelect.svg');
+  }
+}
+
+span.personal__important {
+  background-image: svg-load('important.svg');
+  box-sizing: border-box
 }
 
 .menu {
@@ -84,7 +92,7 @@ select {
   background-image: svg-load('telegram.svg');
 }
 
-.product {
+.product, .slider-nav {
   .slick-next, .slick-prev {
     background-image: inline('next.png');
   }
@@ -103,11 +111,62 @@ select {
   background-image: svg-load('sel.svg');
 }
 
+.slider__zoom:before {
+  background-image: svg-load('zoom.svg');
+}
 
+.card__img span.new {
+  background-image: inline('new.png');
+}
+
+.quantity-nav {
+  background-image: inline('plus-minus.png');
+}
+
+.shipping__title:after {
+  background-image: svg-load('shipping.svg');
+}
+
+.garanty__title:after {
+  background-image: svg-load('garanty.svg');
+}
+
+.tabs-cart1 {
+  background-image: svg-load('cartIcon1.svg');
+  &.is-active {
+    background-image: svg-load('cartIconActive1.svg');
+  }
+}
+
+.tabs-cart2 {
+  background-image: svg-load('cartIcon2.svg');
+  &.is-active {
+    background-image: svg-load('cartIconActive2.svg');
+  }
+}
+
+.tabs-cart3 {
+  background-image: svg-load('cartIcon3.svg');
+  &.is-active {
+    background-image: svg-load('cartIconActive3.svg');
+  }
+}
+
+.product__del {
+  background-image: svg-load('delete.svg');
+}
+
+.link-back {
+  background-image: svg-load('backk.svg');
+}
+
+.link-add {
+  background-image: svg-load('addd.svg');
+}
 
 //adaptive
 @include breakpoint(small down) {
-  .footer__menu--title {
+  .footer__menu--title, .tab__item > span {
     background-image: svg-load('plus.svg');
     &.active {
       background-image: svg-load('minus.svg');

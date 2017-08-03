@@ -1,6 +1,6 @@
 .menu {
   background: $baseColor;
-  z-index: 2;
+  z-index: 8;
   &__wrapper {
     width: 100%;
   }
@@ -96,7 +96,6 @@
             background-position: right bottom;
             background-repeat: no-repeat;
             box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-            background-color: $background;
             position: absolute;
             top: 0;
             left: 100%;
@@ -413,8 +412,8 @@ span.toggle {
   }
 }
 .bodyFixed .js-toggle {
-  -webkit-animation: animate 1500ms ease;
-  animation: animate 1500ms ease;
+  -webkit-animation: animate 750ms ease;
+  animation: animate 750ms ease;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
@@ -435,10 +434,10 @@ span.toggle {
   box-sizing: border-box;
   -webkit-transform: translateX(0);
   transform: translateX(0);
-  -webkit-transition: -webkit-transform 400ms linear;
-  transition: -webkit-transform 400ms linear;
-  transition: transform 400ms linear;
-  transition: transform 400ms linear, -webkit-transform 400ms linear;
+  -webkit-transition: -webkit-transform 100ms linear;
+  transition: -webkit-transform 100ms linear;
+  transition: transform 100ms linear, -webkit-transform 100ms linear;
+  transition: transform 100ms linear;
   will-change: transform;
   z-index: 23;
   overflow-x: hidden;
@@ -452,10 +451,10 @@ span.toggle {
 .bodyFixed .multilevelMenu {
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  -webkit-transition: -webkit-transform 400ms linear;
-  transition: -webkit-transform 400ms linear;
-  transition: transform 400ms linear;
-  transition: transform 400ms linear, -webkit-transform 400ms linear;
+  -webkit-transition: -webkit-transform 100ms linear;
+  transition: -webkit-transform 100ms linear;
+  transition: transform 100ms linear, -webkit-transform 100ms linear;
+  transition: transform 100ms linear;
 }
 
 .multilevelMenu ul {
@@ -463,14 +462,13 @@ span.toggle {
   padding: 0;
   margin: 0;
   width: 300px;
-  height: 100%;
   position: relative;
   -webkit-transform: translateX(0);
   transform: translateX(0);
-  -webkit-transition: -webkit-transform 200ms linear;
-  transition: -webkit-transform 200ms linear;
-  transition: transform 200ms linear;
-  transition: transform 200ms linear, -webkit-transform 200ms linear;
+  -webkit-transition: -webkit-transform 100ms linear;
+  transition: -webkit-transform 100ms linear;
+  transition: transform 100ms linear, -webkit-transform 100ms linear;
+  transition: transform 100ms linear;
   overflow: hidden;
 }
 
@@ -488,8 +486,6 @@ span.toggle {
   z-index: 3;
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
-  height: 100%;
-  overflow-y: auto 
 }
 
 .multilevelMenu ul ul.hidden-menu {
@@ -509,16 +505,12 @@ span.toggle {
   color: #473420;
   display: block;
   width: 100%;
-  padding: 7px 20px;
+  padding: 7px 35px 7px 20px;
   position: relative;
   box-sizing: border-box;
   font-size: 1.25rem;
   line-height: 1.35;
   font-weight: 300;
-}
-
-.multilevelMenu > a {
-  text-transform: uppercase;
 }
 
 .multilevelMenu .js-arrow {
@@ -529,8 +521,7 @@ span.toggle {
   width: 35px;
   cursor: pointer;
   font-size: 1.75rem;
-  font-weight: 300;
-  color: #0ebad0;
+  color: #70c6d1;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -545,23 +536,22 @@ span.toggle {
 
 .multilevelMenu .js-back {
   list-style-type: none;
-  padding: 7px 20px;
+  padding: 7px 20px 7px 35px;
   text-align: right;
   color: #fff;
   background: #70c6d1;
-  font-weight: 300;
   cursor: pointer;
-  line-height: 1.35;
+  line-height: 1.15;
   position: relative;
   font-size: 1.25rem;
-  z-index: 7
+  font-weight: 300;
+  font-size: rem-calc(17);
 }
 
 .multilevelMenu .back > * {
   position: absolute;
   left: 15px;
   top: 0;
-  font-weight: 300;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -575,8 +565,4 @@ span.toggle {
           align-items: center;
   margin-right: 10px;
   font-size: 1.5rem;
-}
-
-.js-swipe.none {
-  display: none;
 }

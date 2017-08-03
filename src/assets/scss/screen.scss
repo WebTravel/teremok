@@ -9,8 +9,9 @@
 
 @import 'foundation';
 @include foundation-flex-grid();
-@include foundation-tabs;
+@include foundation-tabs();
 
+@import 'partials/blocks/header';
 @import 'partials/blocks/header';
 @import 'partials/blocks/footer';
 @import 'partials/blocks/menu';
@@ -26,13 +27,16 @@
 @import 'partials/blocks/paginate';
 @import 'partials/blocks/breadcrumbs';
 @import 'partials/blocks/filter';
+@import 'partials/forms/forms';
 
 @import 'pages/home';
 @import 'pages/catalog';
 @import 'pages/action_page';
 @import 'pages/info';
+@import 'pages/card';
+@import 'pages/cart';
 
-//@include foundation-everything(true)
+//@include foundation-everything(true);
 //@include foundation-global-styles;
 
 // @include foundation-flex-classes;

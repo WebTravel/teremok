@@ -45,7 +45,7 @@ block main
         -var brandImg = "assets/img/brand"
         mixin brand(brandImgID)
           .brandSlider__item
-            img(src=brandImg+brandImgID+'.jpg', alt="")
+            img(src=brandImg+brandImgID+'.png', alt="")
         
         +brand(1)
         +brand(2)
@@ -61,12 +61,12 @@ block main
           li.tabs__name.tabs-title
             a(href="#product__panel2") Акции
         
-        .column.large-12.product__count
+        .column.large-12.small-12.middle-12.product__count
           span#product__count 149
           |  товаров
         
         .column.large-12.tabs-content(data-tabs-content="tabs")
-          .tabs-panel.product__list.is-active#product__panel1
+          .tabs-panel.product__list.similar.is-active#product__panel1
 
             -var productImg = "assets/img/product.jpg"
             mixin product(title)
@@ -116,7 +116,7 @@ block main
             +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
             +product('Коллектор котельной разводки с гидрострелкой')
 
-          .tabs-panel.product__list#product__panel2
+          .tabs-panel.product__list.similar#product__panel2
             +product('Коллектор котельной разводки')
             +product('Коллектор котельной разводки с гидрострелкой')
             +product('Коллектор котельной разводки')

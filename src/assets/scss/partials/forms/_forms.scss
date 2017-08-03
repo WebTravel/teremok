@@ -1,0 +1,138 @@
+/*Forms-Styles*/
+
+.callback {
+  &-bgrd {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    opacity: 0.8;
+    z-index: 101;
+    display: none;
+    background: #2d2d2d;
+    cursor: pointer;
+  }
+  &-form {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 460px;
+    margin: -164px 0 0 -230px;
+    z-index: 102;
+    display: none;
+    background: #fff;
+    border-radius: 4px;
+  }
+}
+
+.x {
+  position: absolute;
+  top: 0;
+  right: rem-calc(15);
+  font-size: 24px;
+  font-size: 2.4rem;
+  cursor: pointer;
+  color: $linkColor;
+  padding: rem-calc(10) rem-calc(15);
+}
+
+.form {
+  &-outer {
+    width: 100%;
+    display: block;
+    padding: rem-calc(35) rem-calc(30);
+    box-sizing: border-box;
+  }
+  &__title {
+    color: $linkColor;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    text-align: center;
+    margin-bottom: rem-calc(10);
+  }
+  &__description {
+    font-style: italic;
+    line-height: 22px;
+    font-size: 1rem;
+    margin-bottom: rem-calc(10);
+    text-align: center;
+  }
+  &__input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 0.925rem;
+    font-style: italic;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin-bottom: 1rem;
+    &::-webkit-input-placeholder, &::-moz-placeholder, &:-moz-placeholder, &:-ms-input-placeholder {
+      color: #ababab;
+      font-style: italic;
+    }
+    &:required {
+      background-color: #dfebf7;
+      border: 1px solid $linkColor;
+      background-repeat: no-repeat;
+      background-position: 97.5% center;
+      &:valid {
+        border: 1px solid $linkColor;
+        background-repeat: no-repeat;
+        background-position: 97.5% center;
+      }
+    }
+  }
+  &__submit {
+    width: 100%;
+    display: block;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 1.25rem;
+  }
+  &__error {
+    font-size: 0.925rem;
+    color: $linkColor;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  textarea {
+    &::-webkit-input-placeholder, &::-moz-placeholder, &:-moz-placeholder, &:-ms-input-placeholder {
+      color: #ababab;
+      font-style: italic;
+    }
+  }
+}
+
+
+//adaptive
+@include breakpoint(small down) {
+  .callback-form {
+    width: 300px;
+    margin: -138px 0 0 -150px;
+  }
+  .x {
+    top: -5px;
+    right: 0
+  }
+  .form {
+    &-outer {
+      padding: rem-calc(20) rem-calc(15);
+    }
+    &__title {
+      font-size: 1.625rem;
+    }
+    &__description {
+      font-size: 1rem;
+      line-height: 1.25
+    }
+  }
+}
+
+.form__input:required {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAyElEQVQoU32SMQ6CQBBF5xNMpLTUxjPYSqG2YmI8gXgCPYregCPQcAT65RLQWkjLmNm4ZFkWt9ps/pv583fQJHFGwHoefi6LXL1p4tSn7RMdKfyAKzOraNYefFCvIa4gBf9BtjgK270GpiBXLN17wIVApAhImbiSysbqABCoTuIcwFnurljeRoCxoQFmtSrKjR2c35JOAxLxjpizZVHeDDQe2vLcd7OgYazOgHYQphP0D1Jw9w04ipy6F5rjNuUADzs633aY1fgCzDqfWw3OLYQAAAAASUVORK5CYII=');
+  &:valid {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAYAAABPhbxiAAAA4ElEQVQoU53Ry03DQBCA4X8sBY5QQi4h3EgHOB3ETgEMFSA6oQOmgdiUYDrwMU4u7oBwi3LYRWtky3KIZDHH1Xyz8xD+GTLWTXO9vfbkIb9KbTka3mVqAk/AZ5Va3MD7XKdHONSJHf7qoEXe8x1FLLaJ1Q2cb7T2wtdJWA7xPNM34CUgHxHvEyuD+YWZFsCjh7KPZxvVSHgfog6Gwa88hcBDiyeOVUAhyXme92uz/hjdcvoYCB3El1D3Y1spLMk5ShFumjfPa7W2MONZnJ1jlutCHAXCxy41vXTn0XccFvgByydeDKuAI9gAAAAASUVORK5CYII=');
+  }
+}
