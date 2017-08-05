@@ -1,0 +1,27 @@
+.leftCompare
+  .leftWrap
+    .leftCompare__title Категория товаров
+    select.leftCompare__list
+      option Газовые котлы
+      option Оборудование
+      option Отопление 
+      option Конверторы 
+      option Теплотрассы
+    
+    .leftSelect
+      .filter__item
+        .filter__body.filter__company
+          .filter__company--item
+            input(type="radio" id="compare1" name="compare")
+            label(for="compare1") Все характеристики
+          .filter__company--item
+            input(type="radio" id="compare2" name="compare" checked)
+            label(for="compare2") Только отличия
+    
+  .leftParams__list
+    .leftParams__item Диаметр подключения
+    .leftParams__item Тип подключения
+    .leftParams__item Характеристика
+    .leftParams__item Характеристика
+    .leftParams__item Характеристика
+    .leftParams__item Характеристика

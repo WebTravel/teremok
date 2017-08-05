@@ -164,6 +164,14 @@ span.personal__important {
   background-image: svg-load('addd.svg');
 }
 
+.leftCompare__list {
+  background-image: svg-load('leftCompare.svg');
+}
+
+.product__delete {
+  background-image: svg-load('deletee.svg');
+}
+
 //adaptive
 @include breakpoint(small down) {
   .footer__menu--title, .tab__item > span {

@@ -1,0 +1,74 @@
+extends ../layout/base.pug
+block prepend head
+  - var title = 'Сравнение товаров';
+block main
+  .row.breadcrumbs__wrapper
+    .column
+      nav.breadcrumbs
+        a(href="/") Главная 
+        span Сравнение
+      h1 Сравнение товаров
+  .row
+    .content__inner.compare__inner.flex.jcsb.column
+      aside.leftCol
+        include ../partials/blocks/leftCompare.pug
+      .compare__main
+        .product__list
+          -var productImg = "assets/img/product.jpg"
+          mixin product(title)
+            .product__item
+              .product__delete
+              a.product__link(href="#")
+                span.product__img--wrapper
+                  img(src=productImg, alt="")
+                span.product__name #{title}
+              .product__body
+                .product__info.flex.jcsb.aic
+                  span.state В наличии
+                  a.product__favorites(href="#")
+                .product__rating.flex.aic
+                  fieldset.field-rating
+                    input(type="radio" id="star5" name="rating" value="5")
+                    label(class = "full-rate" for="star5")
+                    input(type="radio" id="star4half" name="rating" value="4 and a half")
+                    label(class="half-rate" for="star4half")
+                    input(type="radio" id="star4" name="rating" value="4" checked)
+                    label(class = "full-rate" for="star4")
+                    input(type="radio" id="star3half" name="rating" value="3 and a half")
+                    label(class="half-rate" for="star3half")
+                    input(type="radio" id="star3" name="rating" value="3")
+                    label(class="full-rate" for="star3")
+                    input(type="radio" id="star2half" name="rating" value="2 and a half" )
+                    label(class="half-rate" for="star2half")
+                    input(type="radio" id="star2" name="rating" value="2")
+                    label(class = "full-rate" for="star2")
+                    input(type="radio" id="star1half" name="rating" value="1 and a half")
+                    label(class="half-rate" for="star1half")
+                    input(type="radio" id="star1" name="rating" value="1")
+                    label(class="full-rate" for="star1")
+                    input(type="radio" id="starhalf" name="rating" value="half")
+                    label(class="half-rate" for="starhalf")
+                  .rating__count (36)
+                .product__form.flex.jcsb.aic
+                  .product__price
+                    .product__price--count 9 750
+                      |  руб.
+                  a.product__buy.mainButtons(href="#") Купить
+              .product__params
+                .product__params--item 21
+                .product__params--item xxx
+                .product__params--item &mdash;
+                .product__params--item 
+                .product__params--item есть
+                .product__params--item нет
+                .product__params--item есть
+
+          
+          +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+          +product('Коллектор котельной разводки')
+          +product('Коллектор котельной разводки с гидрострелкой WOODSTOKE 300 на 3 контура')
+
+  .row
+    block follow
+      include ../partials/blocks/follow.pug
+      

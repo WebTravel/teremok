@@ -395,6 +395,11 @@
     });
   });
 
+  //Удаление товара из сравнения
+  $('.product__delete').on('click', function() {
+    $(this).closest('.product__item').remove();
+  });
+
   //Forms
   $(function() {
 

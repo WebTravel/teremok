@@ -1,0 +1,115 @@
+.leftCompare {
+  border-right: 1px solid #adb0b2;
+  margin-bottom: rem-calc(45);
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+    margin-bottom: rem-calc(10);
+  }
+  &__list {
+    height: 2.5rem;
+    box-shadow: inset 0.063rem 0.125rem 0.25rem rgba(0, 0, 0, 0.16);
+    border-radius: 0.25rem;
+    border: 0.063rem solid #dedada;
+    background-color: #ffffff;
+    width: calc(100% - 20px);
+    background-position: 100%;
+    font-size: 1rem;
+    padding: 0 rem-calc(15);
+  }
+}
+
+.leftWrap {
+  margin-left: rem-calc(20);
+  min-height: 406px;
+  position: relative;
+  margin-bottom: rem-calc(35);
+}
+
+.leftSelect {
+  position: absolute;
+  bottom: 0;
+  .filter__item {
+    margin-bottom: 0;
+  }
+}
+
+.leftParams {
+  &__list {
+    margin-left: rem-calc(20);
+  }
+  &__item {
+    line-height: 1.875rem;
+    color: #a9a9a9;
+  }
+}
+
+.compare {
+  &__main {
+    width: 100%;
+    margin-bottom: rem-calc(60);
+    .product {
+      &__list {
+        display: flex;
+        width: 820px;
+        overflow: auto;
+        padding-bottom: 15px;
+        &:after {
+          display: none;
+        }
+      }
+      &__item {
+        width: 33.3333%;
+        min-width: 33.3333%;
+        border: none;
+      }
+    }
+    .product__delete {
+      width: 17px;
+      height: 17px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      position: absolute;
+      right: 13px;
+      top: 13px;
+      z-index: 3;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5
+      }
+    }
+  }
+}
+
+.product {
+  &__params {
+    margin-top: rem-calc(55);
+    &--item {
+      padding-left: rem-calc(10);
+      line-height: 1.875rem;
+      color: #a9a9a9;
+    }
+  }
+}
+
+.compare__inner {
+  overflow: auto;
+}
+
+//adaptive
+@include breakpoint(medium down) {
+  .compare__inner {
+      display: flex;
+      flex-wrap: nowrap;
+      .leftCol {
+      width: 200px;
+    }
+  }
+  .compare__main .product__list {
+    width: 780px;
+  }
+  .leftWrap, .leftParams__list {
+    margin-left: 0;
+  }
+}
