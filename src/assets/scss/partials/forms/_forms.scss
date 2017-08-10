@@ -105,6 +105,17 @@
   }
 }
 
+#finishOrder {
+  .form__title, .form__description  {
+    color: #353a3e;
+    font-style: normal;
+  }
+  .form__img {
+    text-align: center;
+    margin-bottom: rem-calc(20);
+  }
+}
+
 
 //adaptive
 @include breakpoint(small down) {

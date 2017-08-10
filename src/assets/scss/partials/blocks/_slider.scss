@@ -4,6 +4,7 @@
   &__item {
     background-repeat: no-repeat;
     background-position: center top;
+    background-color: #dddddd;
     overflow: hidden;
     height: 350px;
   }
@@ -99,7 +100,7 @@
       transform: none
     }
     &__item {
-      background-position: 65% 0
+      background-position: 65% 0;
     }
     &__name {
       font-size: 3.5rem;

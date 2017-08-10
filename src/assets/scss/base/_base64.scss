@@ -50,6 +50,11 @@
 
 .footer__menu--three  nav > a {
   background-image: inline('payment.png');
+  @include breakpoint(large) {
+    &:hover {
+      background-image: inline('payment-hover.png');
+    }
+  }
 }
 
 select {

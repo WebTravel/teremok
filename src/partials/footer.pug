@@ -49,7 +49,21 @@ block footer
             input.form__input(type="text" name="callback-name" placeholder="Как вас зовут")
             input#callback_phone(type="text" name="callback-phone" placeholder="+7 (___) ___-__-__" class="form__input")
             input.form__submit.mainButtons(type="submit" value="Заказать звонок")
-         
+    
+    if(title == 'Корзина')
+      #finishOrder
+        .callback-bgrd
+        .callback-form
+          form(action="#" name="callback__form" method="post")
+            .form-outer
+              .x &times;
+              .form__img
+                img(src="assets/img/user.svg", alt="")
+              .form__title Спасибо за заказ!
+              .form__description Ваш заказ был успешно сформирован.
+                br
+                br
+                | В ближайшее время наш менеджер свяжется с Вами, чтобы проверить и подтвердить заказ. 
 
 
   script(src='https://code.jquery.com/jquery-1.12.4.min.js')
